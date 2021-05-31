@@ -81,3 +81,12 @@ def estimate_model_performance(model, X_test, Y_test):
 
 def binarize_class_variable(entry):
     return 'F' if entry == 'F' else 'NF'
+
+def load_bigram_dataset(root_dir, pca_version=True):
+    dataset_path = ''
+    if pca_version:
+        dataset_path = '4-feature-selection/output/4-bigram.csv'
+    else:
+        dataset_path = '3-vectorization/output/dataset_bigram.csv'
+    df = pd.read_csv('{}{}'.format(root_dir, dataset_path), sep=',', header=0)
+    return df

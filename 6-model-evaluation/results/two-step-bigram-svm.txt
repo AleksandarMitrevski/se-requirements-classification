@@ -1,0 +1,2 @@
+Training: precision = 1.0; recall = 1.0; f1_score = 1.0; accuracy = 1.0
+Test: precision = 0.7130306515573289; recall = 0.5851159793814432; f1_score = 0.6022282747508496; accuracy = 0.5851159793814432
