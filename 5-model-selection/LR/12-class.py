@@ -1,0 +1,47 @@
+import pandas as pd
+import numpy as np
+from sklearn.linear_model import LogisticRegression
+from sklearn.preprocessing import LabelEncoder
+
+import os, sys
+sys.path.insert(0, os.path.abspath("../.."))
+from utils import utils
+
+class_names = ['F', 'A', 'L', 'LF', 'MN', 'O', 'PE', 'SC', 'SE', 'US', 'FT', 'PO']
+label_encoder = LabelEncoder()
+label_encoder.fit(class_names)
+
+def model_select(dataset):
+    output_info = '** {} **\n'.format(dataset)
+    df = utils.load_dataset('../../4-feature-selection/output', dataset, True)
+
+    K = 10  # k-fold cross validation
+    hyperparam_candidates = [0.001, 0.01, 0.1, 0.5, 1, 5, 10, 50, 100, 1000]
+    i = 0
+    for hyperparam_candidate in hyperparam_candidates:
+        random_split = utils.cv_split(df, K)
+        current_f1 = 0
+        for j in range(K):
+            test = random_split[j]
+            training_list = random_split[0:j] + random_split[j+1:K]
+            training = pd.concat(training_list)
+
+            X_train = training.drop('_class_', axis=1)
+            Y_train = label_encoder.transform(training['_class_'])
+            X_test = test.drop('_class_', axis=1)
+            Y_test = label_encoder.transform(test['_class_'])
+            model = LogisticRegression(C=hyperparam_candidate, class_weight='balanced', multi_class='multinomial')
+            model.fit(X_train, Y_train)
+            results = utils.estimate_model_performance(model, X_test, Y_test)
+            
+            current_f1 += results[2]
+
+        current_f1 /= K
+        output_info += 'step {}: {} - {}\n'.format(i + 1, hyperparam_candidate, current_f1)
+        i += 1
+
+    return output_info
+
+bow = model_select('bow-12')
+tfidf = model_select('tfidf-12')
+print('{}\n{}'.format(bow, tfidf))

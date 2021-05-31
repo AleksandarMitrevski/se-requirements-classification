@@ -1,0 +1,294 @@
+@relation P5_NFR_FR_trace
+
+% Manual trace timing: 1 hour and 15 min/person
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% This is a PROMISE Software Engineering Repository data set made publicly
+% available in order to encourage repeatable, verifiable, refutable, and/or
+% improvable predictive models of software engineering.
+%
+% If you publish material based on PROMISE data sets then, please
+% follow the acknowledgment guidelines posted on the PROMISE repository
+% web page http://promisedata.org/repository .
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% (c) 2010 XXXX
+% This data set is distributed under the
+% Creative Commons Attribution-Share Alike 3.0 License
+% http://creativecommons.org/licenses/by-sa/3.0/
+%
+% You are free:
+%
+%    * to Share -- copy, distribute and transmit the work
+%    * to Remix -- to adapt the work
+%
+% Under the following conditions:
+%
+% Attribution. You must attribute the work in the manner specified by
+% the author or licensor (but not in any way that suggests that they endorse
+% you or your use of the work).
+%
+% Share Alike. If you alter, transform, or build upon this work, you
+% may distribute the resulting work only under the same, similar or a 
+% compatible license.
+%
+%    * For any reuse or distribution, you must make clear to others the 
+%      license terms of this work.
+%    * Any of the above conditions can be waived if you get permission from 
+%      the copyright holder.
+%    * Apart from the remix rights granted under this license, nothing in 
+%      this license impairs or restricts the author's moral rights.
+%
+
+
+% 
+% The FR attribute is the set of the functional requirements specified in the project (type F)
+% The requirement number corresponds to the NFR data set project requirements according to the order
+% they appear there. Since the non-functional requirements appear first in this data set, the functional
+% requirements numbering do not begin at 1 (but exactly in the position the functional requirements
+% begin). For Project 5 in the NFR data set the first 37 requirements listed are nonfunctional, so 
+% the functional requirements number starts with R38.
+%
+
+@attribute FR {R38,R39,R40,R41,R42,R43,R44,R45,R46,R47,R48,R49,R50,R51,R52,R53,R54,R55,R56,R57,R58,R59,R60,R61,R62,R63,R64,R65,R66,R67,R68,R69,R70,R71,R72,R73}
+%
+% The attributes below are the set of non-functional requirements (types A,L,LF,MN,O,PE,SC,SE,US,FT,PO). 
+% The non-functional requirements are listed first in the NFR data set so the numbering below matches the 
+% order the requirements are listed in the NFR data set for this project. The data here represents if this
+% non-functional requirement traces = 0, or does not trace = 1 (sometimes called anti-trace) to a given 
+% functional requirement.
+% 
+
+% 5,1, The product must support Internet Explorer 5.5 and above.', O
+@attribute NFR1 {0,1}
+
+% 5,2, The product must support Mozilla Firefox 1.0 and above., O
+@attribute NFR2 {0,1}
+
+% 5,3, The product shall interface with the Choice Parts System.  This provides the feed of recycled parts data., O
+@attribute NFR3 {0,1}
+
+% 5,4, The product shall run on the existing hardware for all environments., O
+@attribute NFR4 {0,1} % General assumption!
+
+% 5,5, The product shall adhere to the corporate Architecture guidelines, O
+@attribute NFR5 {0,1} % General assumption!
+
+% 5,6, The product shall comply with corporate User Interface Guidelines, LF
+@attribute NFR6 {0,1} % General assumption!
+
+% 5,7, The product shall comply with corporate color scheme, LF
+@attribute NFR7 {0,1} % General assumption!
+
+% 5,8, The appearance of the product shall appear professional, LF
+@attribute NFR8 {0,1} % General assumption!
+
+% 5,9, The product shall be easy to use by Adjusters and Collision Estimators.  95% of Adjusters and Collision Estimators shall find the product easy to use., US
+@attribute NFR9 {0,1}
+
+% 5,10, The product shall increase productivity of Collision Estimators. 80% of the Collision Estimators shall agree their productivity has increase within 1 month of using the product., US
+@attribute NFR10 {0,1}
+
+% 5,11, Users shall feel satisfied using the product.  85% of all users will be satisfied with the product., US
+@attribute NFR11 {0,1}
+
+% 5,12, The product shall be easy to learn by Adjusters and Collision Estimators.  The product shall be learned with two days onsite training, US
+@attribute NFR12 {0,1}
+
+% 5,13, The user shall easily locate instructions while using the product.  User help can be found within 90% of the system., US
+@attribute NFR13 {0,1}
+
+% 5,14, The search for recycled parts shall take no longer than 15 seconds.  The search results shall be returned in under 15 seconds., PE
+@attribute NFR14 {0,1}
+
+% 5,15, The search for the preferred repair facility shall take no longer than 8 seconds.  The preferred repair facility is returned within 8 seconds, PE
+@attribute NFR15 {0,1}
+
+% 5,16, The recycled parts audit report shall be returned to the user within 10 seconds.  The audit report shall be returned within 10 seconds., PE
+@attribute NFR16 {0,1}
+
+% 5,17, The preferred repair facility ratings shall be saved within 5 seconds. The save shall occur within 5 seconds., PE
+@attribute NFR17 {0,1}
+
+% 5,18, The product shall adhere to the corporate online availability schedule.  The application is brought down only within 98% of the scheduled outages per the availability schedule., A
+@attribute NFR18 {0,1} % General assumption!
+
+% 5,19, The product shall achieve a 98% uptime. The product shall not fail more than 2% of the available online time., A
+@attribute NFR19 {0,1} % General assumption!
+
+% 5,20, The product shall be able to handle up to 1500 simultaneous users. The system shall perform with 1500 users as a time., SC
+@attribute NFR20 {0,1} % General assumption!
+
+% 5,21, The average number of recycled parts records per day shall be 50 000., SC
+@attribute NFR21 {0,1} % General assumption!
+
+% 5,22, The product shall be able to handle 10 000 concurrent users within 2 years of the initial launch., SC
+@attribute NFR22 {0,1} % General assumption!
+
+% 5,23, For estimators  the product shall be able to be operated in a repair facility during dirty and noisy conditions., O
+@attribute NFR23 {0,1} % General assumption!
+
+% 5, 24, The product shall interface with the ChoiceParts system once per day at approximately 1:00 AM., O
+@attribute NFR24 {0,1} % General assumption!
+
+% 5,25, The maintenance of the product will fall within the established corporate maintenance windows., O
+@attribute NFR25 {0,1} % General assumption!
+
+% 5,26, The product shall be supported using the corporate support center., O
+@attribute NFR26 {0,1} % General assumption!
+
+% 5,27, Product installations and upgrades shall be handled by the middleware technology team within established launch time frames., O
+@attribute NFR27 {0,1} % General assumption!
+
+% 5,28, Only adjusters can request recycled parts audit reports. No users without an adjuster role shall request recycled parts audits., SE
+@attribute NFR28 {0,1}
+
+% 5,29, Only adjusters with a supervisor role can update preferred repair facility ratings. Users without the supervisor role cannot access the repair facility ratings., SE
+@attribute NFR29 {0,1}
+
+% 5,30, Only collision estimators shall search for recycled parts.  Users without the collision estimator role shall not have access to the search for recycled parts., SE
+@attribute NFR30 {0,1}
+
+% 5,31, Only valid data shall be entered into the system.  No invalid data shall be entered into the system., SE
+@attribute NFR31 {0,1} % General assumption!
+
+% 5,32, One insurance company shall not be able to view another insurance companys claim data., SE
+@attribute NFR32 {0,1} % General assumption!
+
+% 5,33, The product shall free of computer viruses., SE
+@attribute NFR33 {0,1} % General assumption!
+
+% 5,34, The system shall prevent malicious attacks including denial of service., SE
+@attribute NFR34 {0,1} % General assumption!
+
+% 5,35, The product must comply with Sarbanes-Oxley., L
+@attribute NFR35 {0,1}
+
+% 5,36, The product shall comply with the estimatics laws relating to recycled parts usage., L
+@attribute NFR36 {0,1} % General assumption!
+
+% 5,37, The product shall comply with insurance regulations regarding claims processing., L
+@attribute NFR37 {0,1} % General assumption!
+%
+% An example of how to interpret the trace matrix below is
+% R38,1,0,0,0,0,0,0,0,0,0,1,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0, %0,0,0,0 means that "R9 traces only to R1,R11,R13,R15" as listed in the NFR %data set.
+% 
+% The actual requirements correspond to the line numbers indicated by the numbers relative to the project number. 
+% For example, if this is Project 5, R38 would be the 9th line for the data listed that starts with '5' (i.e. for Project 5)
+% which is:
+%
+% 5,38,' The user shall search for the preferred repair facility using %vehicle vehicle location  and radius in miles.',F
+%
+%
+
+@data
+
+% 5,38, The user shall search for the preferred repair facility using vehicle  vehicle location  and radius in miles, F
+R38,1,0,0,0,0,0,0,0,0,0,1,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+
+% 5,39, The vehicle data shall include vehicle year  make  and model, F
+R39,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+
+% 5,40, The vehicle location shall include street address  city  state  and zipcode, F
+R40,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+
+% 5,41, The system shall resolve the zipcode for the street address  city  and state if zipcode is unknown., F
+R41,1,1,0,0,0,0,0,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+
+% 5,42, The search radius shall be between 1 and 30 miles, F
+R42,1,1,0,0,0,0,0,0,0,0,1,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+
+% 5,43, The system shall locate the preferred repair facility with the highest ratings for the input criteria, F
+R43,1,1,0,0,0,0,0,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+
+% 5,44, The adjuster shall enter the preferred repair facility on the estimate assignment., F
+R44,0,0,0,0,0,0,0,0,1,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+
+% 5,45, The adjuster shall be able to override the preferred repair facitlity on the estimate assignment. , F
+R45,0,0,0,0,0,0,0,0,1,0,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+
+% 5, 46, The preferred repair facility shall be returned to the user., F
+R46,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+
+% 5, 47, The system shall return a list of repair facilities within the radius if the preferred repair facility cannot be determined., F
+R47,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+
+% 5,48, The estimator shall search for available recycled parts using damaged vehicle parts information., F
+R48,0,0,1,0,0,0,0,0,1,1,1,1,0,1,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0
+
+% 5, 49, The estimator shall search for available recycled parts using a list of preferred parts suppliers., F
+R49,0,0,1,0,0,0,0,0,1,0,1,1,1,1,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0
+
+% 5,50, The system shall search for available recycled parts for the supplied vehicle parts and suppliers., F
+R50,1,1,1,0,0,0,0,0,0,0,1,0,1,1,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0
+
+
+% 5,51, The estimator shall search by zipcode with a radius of 30 miles if no parts are found for the preferred parts suppliers, F
+R51,0,0,0,0,0,0,0,0,1,1,1,1,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+
+% 5,52, The system shall retain the available recycled parts and suppliers returned from the search., F
+R52,1,1,1,0,0,0,0,0,0,0,1,0,0,1,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0
+
+% 5,53, The available recycled parts information and their suppliers shall be returned to the user., F
+R53,0,0,1,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+
+% 5,54, The estimator shall apply selected recycled parts to the collision estimate., F
+R54,0,0,1,0,0,0,0,0,1,1,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+
+% 5,55, The estimator shall not apply recycled parts to the collision estimate if no available parts are returned., F
+R55,0,0,1,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+
+% 5,56, The adjuster shall review the collision estimate., F
+R56,0,0,0,0,0,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+
+% 5,57, The adjuster shall request a recycled parts audit of the collision estimate., F
+R57,0,0,1,0,0,0,0,0,1,0,0,0,1,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+
+% 5,58, The recycled parts search results provided to the estimator shall be retrieved by the system., F
+R58,0,0,1,0,0,0,0,0,1,1,1,0,1,1,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0
+
+% 5,59, The system shall generate an audit report based on the available recycled parts and the collision estimate., F
+R59,1,1,1,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0
+
+% 5,60, The audit report shall include the total number of recycled parts used in the estimate., F
+R60,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0
+
+% 5,61, The audit report shall include the number of available recycled parts from the original search results., F
+R61,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0
+
+% 5,62, The audit report shall include the percentage of available recycled parts used in the estimate , F
+R62,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0
+
+% 5,63, The audit report shall include the total score of the audit which sums the indivual line items., F
+R63,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+% 5,64, The audit report shall be displayed to the user., F
+R64,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+
+%5,65, The audit report shall be available to other adjusters at later points in time., F
+R65,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0
+
+% 5,66, The user shall select to view the preferred repair facility ratings., F
+R66,0,0,0,0,0,0,0,0,0,0,1,0,1,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0
+
+% 5,67, The current repair facility ratings shall be displayed to the user., F
+R67,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0
+
+% 5,68, The system will display a blank set of ratings if there are not ratings yet defined., F
+R68,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+
+% 5, 69, The user shall enter new ratings based on the audit report, F
+R69,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0
+
+% 5,70, The ratings shall be from a scale of 1-10, F
+R70,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+
+% 5,71, The ratings shall include categories for attempted use of recycled parts and actual use of recycled parts, F
+R71,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+
+% 5,72, The user shall select to save the preferred repair facility ratings., F
+R72,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0
+
+% 5,73, The preferred repair facility ratings shall be saved by the system., F
+R73,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0
+

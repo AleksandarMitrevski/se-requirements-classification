@@ -1,0 +1,192 @@
+@relation P2_NFR_FR_trace
+
+% Manual trace timing: 2 hours and 8 min/person
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% This is a PROMISE Software Engineering Repository data set made publicly
+% available in order to encourage repeatable, verifiable, refutable, and/or
+% improvable predictive models of software engineering.
+%
+% If you publish material based on PROMISE data sets then, please
+% follow the acknowledgment guidelines posted on the PROMISE repository
+% web page http://promisedata.org/repository .
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% (c) 2010 XXXX
+% This data set is distributed under the
+% Creative Commons Attribution-Share Alike 3.0 License
+% http://creativecommons.org/licenses/by-sa/3.0/
+%
+% You are free:
+%
+%    * to Share -- copy, distribute and transmit the work
+%    * to Remix -- to adapt the work
+%
+% Under the following conditions:
+%
+% Attribution. You must attribute the work in the manner specified by
+% the author or licensor (but not in any way that suggests that they endorse
+% you or your use of the work).
+%
+% Share Alike. If you alter, transform, or build upon this work, you
+% may distribute the resulting work only under the same, similar or a 
+% compatible license.
+%
+%    * For any reuse or distribution, you must make clear to others the 
+%      license terms of this work.
+%    * Any of the above conditions can be waived if you get permission from 
+%      the copyright holder.
+%    * Apart from the remix rights granted under this license, nothing in 
+%      this license impairs or restricts the author's moral rights.
+%
+
+
+% 
+% The FR attribute is the set of the functional requirements specified in the project (type F)
+% The requirement number corresponds to the NFR data set project requirements according to the order
+% they appear there. Since the non-functional requirements appear first in this data set, the functional
+% requirements numbering do not begin at 1 (but exactly in the position the functional requirements
+% begin). For Project 2 in the NFR data set the first 29 requirements listed are nonfunctional, so 
+% the functional requirements number starts with R30.
+%
+@attribute FR {R30,R31,R32,R33,R34,R35,R36,R37,R38,R39,R40}
+%
+% The attributes below are the set of non-functional requirements (types A,L,LF,MN,O,PE,SC,SE,US,FT,PO). 
+% The non-functional requirements are listed first in the NFR data set so the numbering below matches the 
+% order the requirements are listed in the NFR data set for this project. The data here represents if this
+% non-functional requirement traces = 0, or does not trace = 1 (sometimes called anti-trace) to a given 
+% functional requirement.
+% 
+% 2,1, The look and feel of the system shall conform to the user interface standards of the smart device.’, LF
+@attribute NFR1 {0,1} 
+
+% 2,2, The user interface shall have standard menus  buttons for navigation, LF
+@attribute NFR2 {0,1} 
+
+% 2,3, The system shall have a professional appearance, LF
+@attribute NFR3 {0,1} 
+
+% 2,4, The product shall have a consistent color scheme and fonts., LF
+@attribute NFR4 {0,1} 
+
+% 2,5,The system shall be used by realtors with no training, US
+@attribute NFR5 {0,1} 
+
+% 2,6, The system shall be intuitive and self explanatory., US
+@attribute NFR6 {0,1} 
+
+% 2,7, The product shall be easy for a realtor to learn., US
+@attribute NFR7 {0,1} 
+
+% 2,8, The product shall use symbols and words that are naturally understandable by the realtor community., US
+@attribute NFR8 {0,1} 
+
+% 2,9, The product shall produce search results in an acceptable time, PE
+@attribute NFR9 {0,1} 
+
+% 2,10, The search results shall be returned no later 30      seconds  after the user has entered the search criteria, PE
+@attribute NFR10 {0,1} 
+
+% 2,11, The product shall generate a CMA report in an acceptable time., PE
+@attribute NFR11 {0,1} 
+
+% 2,12, The CMA report shall be returned no later 60 seconds after the user has entered the CMA report criteria., PE
+@attribute NFR12 {0,1} 
+
+% 2,13, The product shall synchronize contacts and appointments in an acceptable time., PE
+@attribute NFR13 {0,1}
+ 
+% 2,14, The product shall synchronize with the office system every hour., PE
+@attribute NFR14 {0,1} 
+
+% 2,15, The product shall be available for use 24 hours per day  365 days  per year, A 
+@attribute NFR15 {0,1} 
+
+% 2,16, Out of 1000 accesses to the system  the system is available 999 times., A
+@attribute NFR16 {0,1}  % Don't understand it!
+
+% 2,17, The product shall operate in offline mode whenever internet connection is unavailable., FT
+@attribute NFR17 {0,1} 
+
+% 2,18, The product shall allow the user to view previously downloaded search results  CMA reports  and appointments., FT
+@attribute NFR18 {0,1}
+
+% 2,19, The product shall retain user preferences in the event of a failure., FT
+@attribute NFR19 {0,1} % Failure on what?
+
+% 2,20, 100% of saved user preferences shall be restored when system comes back online., FT
+@attribute NFR20 {0,1} 
+
+% 2,21, The product shall be able to support multiple remote users, SC
+@attribute NFR21 {0,1} 
+
+% 2,22, The product shall be able support 1000 simultaneous users., SC
+@attribute NFR22 {0,1} 
+
+% 2,23, The product shall be capable of handling the existing 1000 users. This number is expected to grow 5 times within the next year., SC
+@attribute NFR23 {0,1} 
+
+% 2,24, The product shall be installed by an untrained realtor   without recourse to separately-printed instructions., US
+@attribute NFR24 {0,1} % It's general! Can't connect it to one of functional!
+
+% 2, 25, 90% of untrained realtors shall be able to install the product on their device without printed instructions, US
+
+@attribute NFR25 {0,1}  % It's general! Can't connect it to one of functional!
+
+% 2,26, The product is expected to run on Windows CE and Palm operating systems., PO
+@attribute NFR26 {0,1} %General assumption
+
+% 2,28, Only registered realtors shall be able to access the system., SE
+@attribute NFR27 {0,1} % Goes for the whole system!
+
+% 2,28, Every user of the system shall be authenticated and authorized., SE
+@attribute NFR28 {0,1} % Goes for the whole system!
+
+% 2,29, The product shall prevent its data from incorrect data being introduced, SE
+@attribute NFR29 {0,1} 
+%
+% An example of how to interpret the trace matrix below is
+% R30,0,1,1,1,1,1,1,1,1,1,0,0,0,1,1,0,0,0,0,0,1,1,1,0,0,0,0,0,0
+% means that "R30 traces R2,R3,R4,R57,R8,R9,R10,R14,R15,R21,R22,R23" as %listed in the NFR data set.
+% 
+% The actual requirements correspond to the line numbers indicated by the numbers relative to the project number. 
+% For example, if this is Project 2, R30 would be the 30th line for the data listed that starts with '2' (i.e. for Project 1)
+% which is:
+%
+% 2,'The system shall allow a real estate agent to query MLS information.',F
+%
+%
+
+
+@data
+% 2,30, The system shall allow a real estate agent to query MLS information, F
+R30,0,1,1,1,1,1,1,1,1,1,0,0,0,1,1,0,0,0,0,0,1,1,1,0,0,0,0,0,0
+
+% 2,31, The user shall be able to get driving directions to a selected property, F
+R31,1,1,1,1,1,0,1,1,1,0,0,0,0,0,1,0,1,0,0,0,0,1,1,0,0,0,0,0,0
+% 2,32, The user shall be able to download appointments and contact information for clients, F
+R32,0,1,0,0,1,0,0,0,0,0,0,0,0,0,1,0,0,1,0,1,0,1,1,0,0,0,0,0,0
+
+% 2, 33, The system shall display clear property images in the search results
+R33,1,0,1,1,0,0,0,0,1,0,0,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0
+
+% 2, 34, The system shall update or create new property listings in the MLS, F
+R34,1,0,1,1,0,0,0,0,1,0,0,0,0,1,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0
+% 2,35, Realtor shall be able to generate a CMA report based on property criteria, F
+R35,1,1,1,1,1,0,1,1,1,1,1,1,0,0,1,0,1,1,0,1,0,0,0,0,0,0,0,0,0
+
+% 2,36, The system shall be able to call the seller or buyer to schedule an appointment
+R36,0,0,0,0,0,1,0,0,0,0,0,0,1,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0
+
+% 2, 37, The realtor shall be notified of new client appointments after automatic synchronization with office system, F
+R37,0,0,0,0,1,1,1,1,0,0,0,0,1,0,1,0,1,0,0,0,0,1,1,0,0,0,0,0,0
+
+% 2,38, The realtor shall be able to retrieve a map showing property locations for a specified area, F
+R38,0,1,1,1,1,0,1,1,0,0,0,0,0,0,1,0,1,0,0,0,0,1,1,0,0,0,0,0,0
+
+% 2,39, The system shall notify the realtor when a seller or buyer responds to an appointment request, F
+R39,0,1,0,0,1,1,0,0,0,0,0,0,1,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0
+
+%2,40, The product shall allow the user to save the property search results., F
+R40,0,1,1,1,1,0,1,1,0,0,0,0,0,0,1,0,1,0,0,1,0,0,0,0,0,0,0,0,0
+

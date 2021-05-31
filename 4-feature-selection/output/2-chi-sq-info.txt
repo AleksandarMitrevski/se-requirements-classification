@@ -1,0 +1,23 @@
+** bow-12 **
+count: 591
+top ten: second, regulation, fault, comply, available, response, time, handle, failure, interface
+
+** bow-11 **
+count: 382
+top ten: academic, access, able, accommodate, abs, acceptable, accordingly, achieve, accounting, ability
+
+** bow-2 **
+count: 305
+top ten: allow, meeting, use, second, access, class, player, clinical, server, application
+
+** tfidf-12 **
+count: 695
+top ten: comply, portable, regulation, simultaneous, android, io, fault, second, mobile, compatible
+
+** tfidf-11 **
+count: 487
+top ten: academic, accommodate, accordingly, achieve, abs, access, acceptable, accounting, acknowledgement, action
+
+** tfidf-2 **
+count: 624
+top ten: allow, meeting, server, display, player, second, use, select, list, application

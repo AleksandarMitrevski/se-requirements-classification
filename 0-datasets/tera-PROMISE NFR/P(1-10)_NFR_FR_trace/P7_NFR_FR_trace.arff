@@ -1,0 +1,144 @@
+@relation P7_NFR_FR_trace
+
+% Manual trace timing: 50 min/person
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% This is a PROMISE Software Engineering Repository data set made publicly
+% available in order to encourage repeatable, verifiable, refutable, and/or
+% improvable predictive models of software engineering.
+%
+% If you publish material based on PROMISE data sets then, please
+% follow the acknowledgment guidelines posted on the PROMISE repository
+% web page http://promisedata.org/repository .
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% (c) 2010 XXXX
+% This data set is distributed under the
+% Creative Commons Attribution-Share Alike 3.0 License
+% http://creativecommons.org/licenses/by-sa/3.0/
+%
+% You are free:
+%
+%    * to Share -- copy, distribute and transmit the work
+%    * to Remix -- to adapt the work
+%
+% Under the following conditions:
+%
+% Attribution. You must attribute the work in the manner specified by
+% the author or licensor (but not in any way that suggests that they endorse
+% you or your use of the work).
+%
+% Share Alike. If you alter, transform, or build upon this work, you
+% may distribute the resulting work only under the same, similar or a 
+% compatible license.
+%
+%    * For any reuse or distribution, you must make clear to others the 
+%      license terms of this work.
+%    * Any of the above conditions can be waived if you get permission from 
+%      the copyright holder.
+%    * Apart from the remix rights granted under this license, nothing in 
+%      this license impairs or restricts the author's moral rights.
+%
+
+
+% 
+% The FR attribute is the set of the functional requirements specified in the project (type F)
+% The requirement number corresponds to the NFR data set project requirements according to the order
+% they appear there. Since the non-functional requirements appear first in this data set, the functional
+% requirements numbering do not begin at 1 (but exactly in the position the functional requirements
+% begin). For Project 7 in the NFR data set the first 8 requirements listed are nonfunctional, so 
+% the functional requirements number starts with R9.
+%
+
+@attribute FR{R9,R10,R11,R12,R13,R14,R15,R16,R17,R18,R19,R20,R21,R22,R23}
+%
+% The attributes below are the set of non-functional requirements (types A,L,LF,MN,O,PE,SC,SE,US,FT,PO). 
+% The non-functional requirements are listed first in the NFR data set so the numbering below matches the 
+% order the requirements are listed in the NFR data set for this project. The data here represents if this
+% non-functional requirement traces = 0, or does not trace = 1 (sometimes called anti-trace) to a given 
+% functional requirement.
+% 
+
+% 7,1, Recreation of C360Inventory Quantity Adjustment for the period of previous 30 days shall take no more than 30min., PE
+@attribute NFR1 {0,1}
+
+% 7,2, The System shall allow for a minimum of  6 users to work at the same time., PE
+@attribute NFR2 {0,1}
+
+% 7,3, The System shall utilize currently owned computer equipment., O
+@attribute NFR3 {0,1}
+
+% 7,4, The System shall be able to automatically backup business data and restore them on demand., O
+@attribute NFR4 {0,1}
+
+% 7,5, The System shall maintain consistent security.  Any changes in user passwords and/or permissions should take affect in all parts of the System., SE
+@attribute NFR5 {0,1}
+
+% 7,6, The System shall granularly control access rights to all major subsystems.  It should be possible to assign access rights to all subsystems independently., SE
+@attribute NFR6 {0,1}
+
+% 7,7, The System shall meet all applicable accounting standards.  The final version of the System must successfully pass independent audit performed by a certified auditor., L
+@attribute NFR7 {0,1}
+
+% 7,8, The System shall not require additional third party licenses resulting in royalty fees., O
+@attribute NFR8 {0,1}
+
+%
+% An example of how to interpret the trace matrix below is
+% R9,1,0,0,0,1,0,0,1 means that "R9 traces only to R1,R5,R8" as listed in the NFR data set.
+% 
+% The actual requirements correspond to the line numbers indicated by the numbers relative to the project number. 
+% For example, if this is Project 7, R9 would be the 9th line for the data listed that starts with '7' (i.e. for Project 7)
+% which is:
+%
+% 7,9,'The System shall allow generation of Inventory Quantity Adjustment documents on demand.',F
+%
+%
+
+@data
+% 7,9 , The System shall allow generation of Inventory Quantity Adjustment documents on demand., F
+R9,1,0,0,0,1,0,0,1
+
+% 7,10, The System shall allow on demand generation of all Inventory Quantity Adjustment documents since certain point of time., F
+R10,1,0,0,0,1,0,0,1
+
+% 7,11, The IQA subsystem shall take into account current inventory status and adjust inventory of substitutionary ingredients accordingly., F
+R11,1,0,0,0,1,0,0,1
+
+% 7,12, The System shall allow entering  storing and modifying product formulas., F
+R12,0,1,0,1,1,0,1,1
+
+% 7,13, Product formulas shall allow use of semi-products  which have own formulas., F
+R13,0,0,0,0,0,0,0,0
+
+% 7,14, Product formula ingredients shall allow defining substitutionary ingredients., F
+R14,0,0,0,0,0,0,0,0
+
+% 7,15, Product formula substitutionary ingredients shall be entered automatically by the PFE subsystem., F
+R15,0,0,0,1,0,0,0,1
+
+% 7,16, Formula substitutionary ingredients shall be kept in persisted order, F
+R16,0,0,0,0,0,0,0,0
+
+
+% 7,17, Product shall allow entering  storing and modifying product menus used by POS terminals., F
+R17,0,1,0,1,1,0,1,0
+% 7,18, PME Subsystem shall allow building product menus based on the list of products kept in the accounting system., F
+R18,0,0,0,0,0,0,0,0
+
+% 7,19, PME Subsystem shall allow keeping submenus within menus and products within submenus in a managed and persisted order., F
+R19,0,0,0,0,0,1,1,0
+
+% 7,20, PME Subsystem shall allow for a product to exist in more than one submenu, F
+R20,0,0,0,0,0,0,0,0
+
+% 7,21, The RMS System shall have Windows XP look and feel and use GUI futures making its use intuitive., F
+R21,0,0,1,0,0,0,1,0
+
+% 7,22, The System shall generate Inventory Quantity Adjustment document based on product daily sales data and product formulas., F
+R22,0,0,0,1,0,0,0,1
+
+% 7,23, The System shall generate Inventory Quantity Adjustment document automatically when daily Product Sales data is available., F
+R23,0,0,0,1,0,0,0,0
+

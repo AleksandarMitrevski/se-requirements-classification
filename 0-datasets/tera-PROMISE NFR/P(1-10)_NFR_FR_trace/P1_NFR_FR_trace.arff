@@ -1,0 +1,158 @@
+@relation P1_NFR_FR_trace
+
+% Manual trace timing: 1 hour/person
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% This is a PROMISE Software Engineering Repository data set made publicly
+% available in order to encourage repeatable, verifiable, refutable, and/or
+% improvable predictive models of software engineering.
+%
+% If you publish material based on PROMISE data sets then, please
+% follow the acknowledgment guidelines posted on the PROMISE repository
+% web page http://promisedata.org/repository .
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% (c) 2010 XXXX
+% This data set is distributed under the
+% Creative Commons Attribution-Share Alike 3.0 License
+% http://creativecommons.org/licenses/by-sa/3.0/
+%
+% You are free:
+%
+%    * to Share -- copy, distribute and transmit the work
+%    * to Remix -- to adapt the work
+%
+% Under the following conditions:
+%
+% Attribution. You must attribute the work in the manner specified by
+% the author or licensor (but not in any way that suggests that they endorse
+% you or your use of the work).
+%
+% Share Alike. If you alter, transform, or build upon this work, you
+% may distribute the resulting work only under the same, similar or a 
+% compatible license.
+%
+%    * For any reuse or distribution, you must make clear to others the 
+%      license terms of this work.
+%    * Any of the above conditions can be waived if you get permission from 
+%      the copyright holder.
+%    * Apart from the remix rights granted under this license, nothing in 
+%      this license impairs or restricts the author's moral rights.
+%
+
+
+% 
+% The FR attribute is the set of the functional requirements specified in the project (type F)
+% The requirement number corresponds to the NFR data set project requirements according to the order
+% they appear there. Since the non-functional requirements appear first in this data set, the functional
+% requirements numbering do not begin at 1 (but exactly in the position the functional requirements
+% begin). For Project 1 in the NFR data set the first 8 requirements listed are nonfunctional, so 
+% the functional requirements number starts with R9.
+%
+
+@attribute FR {R9,R10,R11,R12,R13,R14,R15,R16,R17,R18,R19,R20,R21,R22,R23,R24,R25,R26,R27,R28 }
+%
+% The attributes below are the set of non-functional requirements (types A,L,LF,MN,O,PE,SC,SE,US,FT,PO). 
+% The non-functional requirements are listed first in the NFR data set so the numbering below matches the 
+% order the requirements are listed in the NFR data set for this project. The data here represents if this
+% non-functional requirement traces = 0, or does not trace = 1 (sometimes called anti-trace) to a given 
+% functional requirement.
+% 
+% 1,1, The system shall refresh the display every 60 seconds.,PE
+@attribute NFR1 {0,1}
+
+% 1,2, The application shall match the color of the schema set forth by Department of Homeland Security, LF 
+@attribute NFR2 {0,1}
+
+% 1,3, If projected  the data must be readable.  On a 10x10 projection screen  90% of viewers must be able to read Event / Activity data from a viewing distance of 30, US
+@attribute NFR3 {0,1}
+
+% 1,4, The product shall be available during normal business hours. As long as the user has access to the client PC  the system will be available 99% of the time during the first six months of operation., A
+@attribute NFR4 {0,1}
+
+% 1,5, If projected  the data must be understandable. On a 10x10 projection screen  90% of viewers must be able to determine that Events or Activities are occuring in current time from a viewing distance of 100, US
+@attribute NFR5 {0,1} %I don't understand what's the relation between the distance and being understandable! Does it mean readable?
+
+% 1,6, The product shall ensure that it can only be accessed by authorized users.  The product will be able to distinguish between authorized and unauthorized users in all access attempts, SE
+@attribute NFR6 {0,1}
+
+% 1,7, The product shall be intuitive and self-explanatory.  :  90% of new users shall be able to start the display of Events or Activities within 90 minutes of using the product., US
+@attribute NFR7 {0,1}
+
+% 1,8, The product shall respond fast to keep up-to-date data in the display., PE
+@attribute NFR8 {0,1}
+
+
+%
+% An example of how to interpret the trace matrix below is
+% R9,0,0,0,0,0,1,1,1 means that "R9 traces only to R8,R7,R6" as listed in the NFR data set.
+% 
+% The actual requirements correspond to the line numbers indicated by the numbers relative to the project number. 
+% For example, if this is Project 1, R9 would be the 9th line for the data listed that starts with '1' (i.e. for Project 1)
+% which is:
+%
+% 1,'The system shall have a MDI form that allows for the viewing of the graph and the data table.',F
+%
+%
+@data
+
+% 1,9, The system shall have a MDI form that allows for the viewing of the graph and the data table., F
+R9,0,0,0,0,0,1,1,1
+
+% 1,10, The system shall display Events in a vertical table by time., F
+R10,1,1,1,1,1,1,1,1
+
+% 1,11, The system shall display the Events in a graph by time., F
+R11,1,1,1,1,1,1,1,1
+
+% 1,12, The system shall display Events or Activities., F
+R12,1,1,1,1,1,1,1,1
+
+% 1,13, The display shall have two regions:  left 2/3 of the display is graphical  right 1/3 of the display is a data table, F
+R13,0,0,1,0,1,0,1,0
+
+% 1,14, The data displayed in both the nodes within the graph and the rows in the table are MSEL Summary data, F
+R14,0,0,1,0,1,0,1,0
+
+% 1,15, The table side of the display shall be split into 2 regions: sequential and temporal., F
+R15,0,0,1,0,1,0,1,0
+
+% 1,16, The top 1/4 of the table will hold events that are to occur sequentially., F
+R16,0,0,1,0,1,0,0,0
+
+% 1,17, The bottom 3/4 of the table will hold events that occur according to its relevance to current time., F
+R17,0,0,1,0,1,0,0,0
+
+% 1,18, The system shall color code events according to their variance from current time., F
+R18,0,1,0,0,0,0,0,0
+
+% 1,19, The system shall display data from the Sync Matrix 1.0 and Exercise Management Tool 1.0 applications, F
+R19,0,0,0,1,0,0,0,0
+
+% 1,20, The system shall link Events back to either the Sync Matrix 1.0 or the Exercise Managment Tool 1.0 applications for modifications., F
+R20,0,0,0,1,0,0,0,0
+
+% 1,21, The system shall allow modification of the display., F
+R21,0,0,1,1,0,1,0,1
+
+% 1,22, The system shall offer a display of all the Events in the exercise., F
+R22,0,0,1,1,0,1,0,1
+
+% 1,23, The system shall filter data by: Venues and Key Events., F
+R23,0,0,0,1,1,1,1,0
+
+% 1,24, The system shall allow a user to define the time segments, F
+R24,0,0,0,1,0,0,0,1
+
+% 1,25, The system shall display the local and exercise time in separate clocks, F
+R25,1,0,1,1,0,0,0,0
+
+% 1,26, The system shall offer the ability to pause and resume the refresh of data., F
+R26,1,0,0,1,0,0,0,0
+
+% 1,27, The system shall provide charts for the Activity or Event actual versus assumed time., F
+R27,0,0,1,0,0,1,0,1
+
+% 1,28, The system shall provide a history report of changes made to the Activity or Event data, F
+R28,0,0,0,1,1,0,0,1
+

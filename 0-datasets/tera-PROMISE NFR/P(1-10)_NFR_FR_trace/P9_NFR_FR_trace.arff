@@ -1,0 +1,129 @@
+@relation P9_NFR_FR_trace
+
+% Manual trace timing: 47 mins/person
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% This is a PROMISE Software Engineering Repository data set made publicly
+% available in order to encourage repeatable, verifiable, refutable, and/or
+% improvable predictive models of software engineering.
+%
+% If you publish material based on PROMISE data sets then, please
+% follow the acknowledgment guidelines posted on the PROMISE repository
+% web page http://promisedata.org/repository .
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% (c) 2010 XXXX
+% This data set is distributed under the
+% Creative Commons Attribution-Share Alike 3.0 License
+% http://creativecommons.org/licenses/by-sa/3.0/
+%
+% You are free:
+%
+%    * to Share -- copy, distribute and transmit the work
+%    * to Remix -- to adapt the work
+%
+% Under the following conditions:
+%
+% Attribution. You must attribute the work in the manner specified by
+% the author or licensor (but not in any way that suggests that they endorse
+% you or your use of the work).
+%
+% Share Alike. If you alter, transform, or build upon this work, you
+% may distribute the resulting work only under the same, similar or a 
+% compatible license.
+%
+%    * For any reuse or distribution, you must make clear to others the 
+%      license terms of this work.
+%    * Any of the above conditions can be waived if you get permission from 
+%      the copyright holder.
+%    * Apart from the remix rights granted under this license, nothing in 
+%      this license impairs or restricts the author's moral rights.
+%
+
+
+% 
+% The FR attribute is the set of the functional requirements specified in the project (type F)
+% The requirement number corresponds to the NFR data set project requirements according to the order
+% they appear there. Since the non-functional requirements appear first in this data set, the functional
+% requirements numbering do not begin at 1 (but exactly in the position the functional requirements
+% begin). For Project 9 in the NFR data set the first 8 requirements listed are nonfunctional, so 
+% the functional requirements number starts with R9.
+%
+
+@attribute FR {R10,R11,R12,R13,R14,R15,R16,R17,R18,R19,R20,R21,R22,R23,R24,R9}
+
+% 9,1, Total lead cycle time must be completed in 5 minutes for 90% of lead volume between the business hours of 8AM CST to 8PM CST; then 3 minutes for 99% of lead volume during off business hours., PE
+@attribute NFR1 {0,1}
+
+% 9,2, No lead evaluation will complete in a time period longer than 25 seconds for 97% of all leads processed., PE
+@attribute NFR2 {0,1}
+
+% 9,3, For leads that process longer than 25 seconds the system will record the event and duration, PE
+@attribute NFR3 {0,1}
+
+% 9,4, The process must fit within the processing time conditions set forth by the Auto Rep Assignment process in which a lead is assigned within 3 minutes of the total life cycle.,PE
+@attribute NFR4 {0,1}
+
+% 9,5, The lead washing process will operate within the established physical web service structure., O
+@attribute NFR5 {0,1}
+
+% 9,6, The washing process must use a non binding  neutral data format  such as xml  when receiving and processing lead data., O
+@attribute NFR6 {0,1}
+
+% 9,7, Defect reports will be available to technical units on a 24x7 basis., A
+@attribute NFR7 {0,1}
+
+% 9,8, Washing parameters will be updated during scheduled maintenance hours., MN
+@attribute NFR8 {0,1}
+
+@data
+
+% 9,9, The vendor will verify the invalid lead., F
+R9,1,1,0,0,0,0,0,0
+
+% 9,10, Vendor will submit a credit validation record to be applied to the enterprise billing system., F
+R10,1,1,1,0,0,0,0,0
+
+% 9,11, If a lead is scored to the high range the system will supply the lead data and score to the enterprise system., F
+R11,1,0,0,0,0,0,0,0
+
+% 9,12, The leads washing functionality will validate all leads received by the web service for valid data, F
+R12,1,1,1,0,1,0,0,1
+
+% 9,13, The leads washing functionality will insert all leads captured by the web service., F
+R13,1,0,0,0,0,0,0,1
+
+% 9,14, If the leads score falls within the high average score then it will be process by the ARA functionality., F
+R14,0,0,0,0,0,0,0,0
+
+% 9,15, If the leads score falls within the medium average then it will be set for manual verification by an Enrollment Coordinator through the eleads system., F
+R15,0,0,0,0,0,0,0,0
+
+% 9,16, If the leads score falls within the low average then it will be returned to the supplying vendor, F
+R16,0,0,0,0,0,1,0,0
+
+% 9,17, The leads washing functionality will compile both contact and academic scoring information for a total score., F
+R17,1,0,0,0,0,0,0,0
+
+% 9,18, The leads washing functionality will use the parameters supplied by corporate and schools to score part of the lead., F
+R18,1,0,0,0,0,0,0,1
+
+% 9,19, The leads washing functionality will return the lead data supplied to the vendor along with the reason of rejection., F
+R19,1,0,0,0,0,0,1,0
+
+% 9,20, The leads washing functionality will have an interface in which lead data parameters can be maintained., F
+R20,0,0,0,0,0,0,0,1
+
+% 9,21, The leads washing functionality will verify the users authentication and rights to make parameter updates., F
+R21,1,0,0,0,0,0,0,1
+
+% 9,22, The leads washing functionality will store any potential lead duplicates returned by the enterprise system., F
+R22,1,0,0,0,0,0,0,0
+
+% 9,23, Prior to submitting the lead to the enterprise system the leads washing functionality will assign the lead to an admissions rep., F
+R23,1,0,0,1,0,0,0,0
+
+% 9,24, The leads washing functionality shall receive a period list of available reps from the enterprise system., F
+R24,1,0,0,0,0,0,0,0
+

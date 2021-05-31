@@ -1,0 +1,236 @@
+@relation P10_NFR_FR_trace
+
+% Manual trace timing: 3 hours and 47 min/person
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% This is a PROMISE Software Engineering Repository data set made publicly
+% available in order to encourage repeatable, verifiable, refutable, and/or
+% improvable predictive models of software engineering.
+%
+% If you publish material based on PROMISE data sets then, please
+% follow the acknowledgment guidelines posted on the PROMISE repository
+% web page http://promisedata.org/repository .
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% (c) 2010 XXXX
+% This data set is distributed under the
+% Creative Commons Attribution-Share Alike 3.0 License
+% http://creativecommons.org/licenses/by-sa/3.0/
+%
+% You are free:
+%
+%    * to Share -- copy, distribute and transmit the work
+%    * to Remix -- to adapt the work
+%
+% Under the following conditions:
+%
+% Attribution. You must attribute the work in the manner specified by
+% the author or licensor (but not in any way that suggests that they endorse
+% you or your use of the work).
+%
+% Share Alike. If you alter, transform, or build upon this work, you
+% may distribute the resulting work only under the same, similar or a 
+% compatible license.
+%
+%    * For any reuse or distribution, you must make clear to others the 
+%      license terms of this work.
+%    * Any of the above conditions can be waived if you get permission from 
+%      the copyright holder.
+%    * Apart from the remix rights granted under this license, nothing in 
+%      this license impairs or restricts the author's moral rights.
+%
+
+
+% 
+% The FR attribute is the set of the functional requirements specified in the project (type F)
+% The requirement number corresponds to the NFR data set project requirements according to the order
+% they appear there. Since the non-functional requirements appear first in this data set, the functional
+% requirements numbering do not begin at 1 (but exactly in the position the functional requirements
+% begin). For Project 10 in the NFR data set the first 15 requirements listed are nonfunctional, so 
+% the functional requirements number starts with R16.
+%
+
+@attribute FR {R16,R17,R18,R19,R20,R21,R22,R23,R24,R25,R26,R27,R28,R29,R30,R31,R32,R33,R34,R35,R36,R37,R38,R39,R40,R41,R42,R43,R44,R45,R46,R47,R48,R49,R50,R51,R52,R53}
+%
+% The attributes below are the set of non-functional requirements (types A,L,LF,MN,O,PE,SC,SE,US,FT,PO). 
+% The non-functional requirements are listed first in the NFR data set so the numbering below matches the 
+% order the requirements are listed in the NFR data set for this project. The data here represents if this
+% non-functional requirement traces = 0, or does not trace = 1 (sometimes called anti-trace) to a given 
+% functional requirement.
+% 
+% 10,1, The product shall simulate the look of ships at sea., LF
+@attribute NFR1 {0,1}
+
+% 10,2, The product shall display the grids within a circle as a view from a periscope., LF
+@attribute NFR2 {0,1}
+
+% 10,3, The product shall display each type of ship in a grid using an image of the specific type of ship., LF
+@attribute NFR3 {0,1}
+
+% 10,4, When the offensive player takes a shot  the product shall simulate the sound of a ship at sea., LF
+@attribute NFR4 {0,1}
+
+% 10,5, When a shot is marked as a miss  the product shall simulate the sound of a shot missing its target., LF
+@attribute NFR5 {0,1}
+
+% 10,6, When a shot is marked as a hit  the product shall simulate the sound of a shot hitting its target., LF
+@attribute NFR6 {0,1}
+
+% 10,7, When a ship is sunk  the product shall simulate the sound of a sinking ship., LF
+@attribute NFR7 {0,1}
+
+% 10,8, The product shall be available 24 hours per day  seven days per week., A
+@attribute NFR8 {0,1} % req too broad? Traces to all FR's - investigate
+
+
+% 10,9, The product shall able to handle a large number of games simultaneously., PE
+@attribute NFR9 {0,1} % <req too vague?>
+
+% 10,10, The response time shall be fast enough to maintain the flow of the game.  The response time shall be no more than 2 seconds for 95% of responses and no more than 4% for the remaining responses., PE
+@attribute NFR10 {0,1}
+
+% 10,11, The product shall protect the identity of the players. The product shall provide players no access to information that might reveal the identity of another player., PE
+@attribute NFR11 {0,1}
+
+% 10,12, The product shall be intuitive and self-explanatory.  Nine out ten users shall be able to successfully complete a game with no training., US
+@attribute NFR12 {0,1}
+
+% 10,13, The product shall be available to players who understand English  Spanish and French.  The product shall allow the user to select the language upon accessing the product., US
+@attribute NFR13 {0,1}
+
+% 10,14, The product shall provide players no access to information that might reveal the identity of another player, SE
+@attribute NFR14 {0,1} %<same as req 11?>
+
+% 10,15, The response time shall be fast enough to maintain the flow of the game. The response time shall be no more than 2 seconds for 95% of responses and no more than 4% for the remaining responses., PE
+@attribute NFR15 {0,1} %<same as req 10?>
+
+%
+% An example of how to interpret the trace matrix below is
+% R16,0,0,0,0,0,0,0,1,0,0,1,1,1,1,0 means that "R16 traces only to R8,R11,R12,R13,R14" as listed in the NFR data set.
+% 
+% The actual requirements correspond to the line numbers indicated by the numbers relative to the project number. 
+% For example, if this is Project 10, R16 would be the 16th line for the data listed that starts with '10' (i.e. for Project 10)
+% which is:
+%
+% 10,16, ' The product shall maintain a list of players.',F
+%
+%
+
+
+@data
+% 10,16, The product shall maintain a list of players., F
+R16,0,0,0,0,0,0,0,1,0,0,1,1,1,1,0
+
+% 10,17, The product shall allow a user to identify himself or herself as a player., F
+R17,0,0,0,0,0,0,0,1,0,0,1,1,1,1,0
+
+% 10,18, Once a game has been initiated  the product shall make the players assigned to the game unavailable for selection from the list of players., F
+R18,0,0,0,0,0,0,0,1,1,0,1,0,0,1,0
+
+% 10,19, The product shall allow a user to remove himself or herself from the list of players at any time., F
+R19,0,0,0,0,0,0,0,1,1,0,1,1,1,0,0
+
+% 10,20, The product shall make inactive players unavailable for selection from the list of players., F
+R20,0,0,0,0,0,0,0,1,1,0,1,0,0,1,0
+
+% 10,21, The product shall remove players who have been inactive for 24 hours from the list of players., F
+R21,0,0,0,0,0,0,0,1,1,0,1,0,0,1,0
+
+% 10,22, The product shall allow a player to initiate a game by selecting another available player from the list of players., F
+R22,0,0,0,0,0,0,0,1,1,0,0,1,0,0,0
+
+% 10,23, Once a game is initiated  the product shall display a defensive grid to each player, F
+R23,0,1,1,0,0,0,0,1,0,1,0,1,0,0,1
+
+% 10,24, Once a game is initiated  the product shall display an offensive grid to each player., F
+R24,0,1,1,0,0,0,0,1,0,0,0,1,0,0,0
+
+% 10,25, The product shall prevent a player from viewing the offensive or defensive grids of the other player., F
+R25,0,1,0,0,0,0,0,1,0,0,0,0,0,0,0
+
+% 10,26, Once a game is initiated  the product shall allow each player to position their 5 ships on their respective defensive grids., F
+R26,1,1,1,0,0,0,0,1,0,1,0,1,0,0,1
+
+% 10,27, The product shall allow a player to position ships horizontally on their grid., F
+R27,1,1,1,0,0,0,0,1,0,1,0,1,0,0,1
+
+% 10,28, The product shall allow the player to position ships vertically on their grid., F
+R28,1,1,1,0,0,0,0,1,0,1,0,1,0,0,1
+
+% 10,29, The product shall allow the player to position ships diagonally on their grid, F
+R29,1,1,1,0,0,0,0,1,0,1,0,1,0,0,1
+
+% 10,30, The product shall prevent the player from overlapping ships on their grid., F
+R30,1,1,1,0,0,0,0,1,0,1,0,1,0,0,1
+
+% 10,31, When both players have positioned their 5 ships on their defensive grids  the product shall define the status of each player for the first turn., F
+R31,0,1,1,0,0,0,0,1,0,1,0,1,0,0,1
+
+% 10,32, For each turn  the product shall identify one player as offensive status and one player as defensive status., F
+R32,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0
+
+% 10,33, The product shall maintain the status of each player for a turn  either offensive or defensive., F
+R33,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0
+
+% 10,34, At the start of each turn  the product shall notify each player of his or her status., F
+R34,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1
+
+% 10,35, For each turn  the product shall allow the offensive player to define a shot., F
+R35,0,0,0,1,0,0,0,1,0,1,0,1,1,0,1
+
+% 10,36, For each shot  the product shall examine the defensive grid of the defensive player to determine whether the shot was a hit or miss.,F
+R36,0,1,0,1,1,1,0,1,0,1,0,0,0,0,0
+
+% 10,37, For each shot  the product shall notify the players whether the shot was a hit or miss., F
+R37,0,0,0,1,1,1,0,1,0,1,0,1,1,0,1
+
+% 10,38, For each shot  the product shall mark the shot as a hit or miss on the defensive grid of the defensive player., F
+R38,0,1,0,0,0,0,0,1,0,1,0,1,1,0,1
+
+% 10,39, For each shot  the product shall mark the shot as a hit or miss on the offensive grid of the offensive player., F
+R39,0,1,0,0,0,0,1,1,0,1,0,1,1,0,1
+
+% 10,40, When the hit results in sinking a ship  the product shall notify the players that the ship was sunk., F
+R40,1,0,0,0,0,0,1,1,0,1,0,1,1,0,1
+
+% 10,41, When the hit results in sinking a ship  the product shall mark the ship as sunk on the defensive grid of the defensive player., F
+R41,1,1,1,0,0,0,0,1,0,1,0,1,1,0,1
+
+% 10,42, When the hit results in sinking a ship  the product shall indicate the type of ship sunk on the defensive grid of the defensive player., F
+R42,1,1,1,0,0,0,0,1,0,1,0,1,0,0,1
+
+% 10,43, When the hit results in sinking a ship  the product shall mark the ship as sunk on the offensive grid of the offensive player., F
+R43,1,1,1,1,0,0,0,1,0,1,0,1,0,0,1
+
+% 10,44, If the shot was marked as a hit  the product shall allow the offensive player to define a shot., F
+R44,0,0,0,1,0,0,0,1,0,1,0,1,1,0,1
+
+% 10,45, If the shot was marked as a miss  the product shall change the status of the offensive player to defensive, F
+R45,0,0,0,0,0,0,0,1,0,1,0,1,0,0,0
+
+% 10,46, If the shot was marked as a miss  the product shall change the status of the defensive player to offensive, F
+R46,0,0,0,0,0,0,0,1,0,1,0,0,0,0,0
+
+% 10,47, The product shall continue to assign turns until the game is ended.,F
+R47,0,0,0,0,0,0,0,1,0,0,0,1,0,0,0
+
+% 10,48, The product shall end a game when a hit by the offensive player results in sinking the last of the defensive playerís ships  which had not been previously marked as sunk., F
+R48,1,0,1,0,0,0,0,1,0,1,0,0,0,0,0
+
+% 10,49, The product shall allow a player to end a game at any time during the game., F
+R49,0,0,0,0,0,0,0,1,0,1,0,1,1,0,0
+
+% 10,50, When a game is ended  the product shall notify the players that the game is ended., F
+R50,0,0,0,0,0,0,0,1,0,1,0,1,1,0,0
+
+% 10,51, The notification of the game ending will include the reason the game is ended (i.e.  a player has won the game or a player has ended the game)., F
+R51,0,0,0,0,0,0,0,1,0,0,0,1,1,0,0
+
+% 10,52, When a game is ended  the product shall allow each player to identify himself or herself as an available player in the list of players., F
+R52,0,0,0,0,0,0,0,1,1,0,1,1,0,1,0
+
+% 10,53, When a game is ended  the product shall allow each player to remove himself or herself from the list of players., F
+R53,0,0,0,0,0,0,0,1,1,0,1,1,0,1,0
+

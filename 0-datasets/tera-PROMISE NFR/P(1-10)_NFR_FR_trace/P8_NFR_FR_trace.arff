@@ -1,0 +1,356 @@
+@relation P8_NFR_FR_trace
+
+% Manual trace timing: 1 hour and 27 mins /person
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% This is a PROMISE Software Engineering Repository data set made publicly
+% available in order to encourage repeatable, verifiable, refutable, and/or
+% improvable predictive models of software engineering.
+%
+% If you publish material based on PROMISE data sets then, please
+% follow the acknowledgment guidelines posted on the PROMISE repository
+% web page http://promisedata.org/repository .
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% (c) 2010 XXXX
+% This data set is distributed under the
+% Creative Commons Attribution-Share Alike 3.0 License
+% http://creativecommons.org/licenses/by-sa/3.0/
+%
+% You are free:
+%
+%    * to Share -- copy, distribute and transmit the work
+%    * to Remix -- to adapt the work
+%
+% Under the following conditions:
+%
+% Attribution. You must attribute the work in the manner specified by
+% the author or licensor (but not in any way that suggests that they endorse
+% you or your use of the work).
+%
+% Share Alike. If you alter, transform, or build upon this work, you
+% may distribute the resulting work only under the same, similar or a 
+% compatible license.
+%
+%    * For any reuse or distribution, you must make clear to others the 
+%      license terms of this work.
+%    * Any of the above conditions can be waived if you get permission from 
+%      the copyright holder.
+%    * Apart from the remix rights granted under this license, nothing in 
+%      this license impairs or restricts the author's moral rights.
+%
+
+
+% 
+% The FR attribute is the set of the functional requirements specified in the project (type F)
+% The requirement number corresponds to the NFR data set project requirements according to the order
+% they appear there. Since the non-functional requirements appear first in this data set, the functional
+% requirements numbering do not begin at 1 (but exactly in the position the functional requirements
+% begin). For Project 8 in the NFR data set the first 73 requirements listed are nonfunctional, so 
+% the functional requirements number starts with R74.
+%
+
+@attribute FR {R74,R75,R76,R77,R78,R79,R80,R81,R82,R83,R84,R85,R86,R87,R88,R89,R90,R91,R92,R93}
+
+%
+% The attributes below are the set of non-functional requirements (types A,L,LF,MN,O,PE,SC,SE,US,FT,PO). 
+% The non-functional requirements are listed first in the NFR data set so the numbering below matches the 
+% order the requirements are listed in the NFR data set for this project. The data here represents if this
+% non-functional requirement traces = 0, or does not trace = 1 (sometimes called anti-trace) to a given 
+% functional requirement.
+% 
+
+% 8,1, Administrator shall be able to activate a pre-paid card via the Administration section in under 5 seconds.,PE
+@attribute NFR1 {0,1}
+
+% 8,2, Customer shall be able to check the status of their prepaid card  by entering in the PIN number  in under 5 seconds.,PE
+@attribute NFR2 {0,1} %General assumption
+
+% 8,3, System shall let customers register on the website as a ìpay as you goî user in under 5 minutes., PE
+@attribute NFR3 {0,1}
+
+% 8,4, System shall let customers register on the website as a ìunlimited movie subscriberî user in under 10 minutes., PE
+@attribute NFR4 {0,1}
+
+% 8,5, System shall let existing customers log into the website with their email address and password in under 5 seconds, PE
+@attribute NFR5 {0,1}
+
+% 8,6, System shall let customers cancel their account  process shall take no longer than 2 minutes.  Database will mark the account as inactive  and user will not be able to log into the website., PE
+@attribute NFR6 {0,1}
+
+% 8,7, System shall let administrator de-activate a customer account in under 1 minute. Customer will no longer be able to access the website., PE
+@attribute NFR7 {0,1}
+
+% 8,8, System shall let administrator add/remove movies on the website in under 5 minutes.  Entered movie information will be stored in the database and will now be available on the website., PE
+@attribute NFR8 {0,1}
+
+% 8,9, System shall let the administrator add/remove categories on the website in under 5 minutes., PE
+@attribute NFR9 {0,1}
+
+% 8,10, System shall let Izogn Manager access sales and usage statistics in under 2 minutes., PE
+@attribute NFR10 {0,1}
+
+% 8,11, System shall let administrators generate unique pre-paid pins in under 2 minutes and generate an Excel file with the generated PINs., PE
+@attribute NFR11 {0,1}
+
+% 8,12, The website shall be attractive to all audiences.  The website shall appear to be fun and the colors should be bright and vibrant., LF
+@attribute NFR12 {0,1} %General assumption
+
+% 8,13, The website should have an African feel  but should not alienate non-Africans.  The website should use animation on pages which are describing the services  to grab the users attention and encourage them to sign up., LF
+@attribute NFR13 {0,1}
+
+% 8,14, The website design should be modern  clean  and concise., LF
+@attribute NFR14 {0,1} %General assumption
+
+% 8,15, The product should be able to be used by 90% of novice users on the Internet., US
+@attribute NFR15 {0,1} %General assumption
+
+% 8,16, Users should only have to navigate through a maximum of 4 pages  to create an account with the website., US
+@attribute NFR16 {0,1} %General assumption
+
+% 8,17, Users should be able to access their streaming movies in under 2 clicks after logging into the website., US
+@attribute NFR17 {0,1} %General assumption
+
+% 8,18, An anonymous survey will show that 70% of customers are comfortable purchasing streaming movies after 2 weeks using the website., US
+@attribute NFR18 {0,1}
+
+% 8,19, An anonymous survey will show that 95% of customers are comfortable using and purchasing pre-paid cards after a month of using the system., US
+@attribute NFR19 {0,1} %General assumption
+
+% 8,20, The product shall retain the customerís buying preferences and information., US
+@attribute NFR20 {0,1} %General assumption
+
+% 8,21, The product shall be easy for customers with novice skills on the  Internet to purchase and watch streaming movies.  Customers should be able to purchase and watch a pre-determined movie in under 3 minutes, US
+@attribute NFR21 {0,1}
+
+% 8,22, The product shall use symbols and words that are naturally understandable by users familiar with websites, US
+@attribute NFR22 {0,1} %General assumption
+
+% 8,23, The website will use standard Internet conventions when interacting with the user., US
+@attribute NFR23 {0,1} %General assumption
+
+% 8,24, Any interface between a user and the automated system shall have a maximum response time of 5 seconds  unless noted by an exception below., PE
+@attribute NFR24 {0,1}
+
+% 8,25, When purchasing a streaming movie or pre-paid card via credit card  the processing time should have a maximum response time of 15 seconds., PE
+@attribute NFR25 {0,1}
+
+% 8,26, When streaming a movie  the buffering time should take no longer than 10 seconds (plus any latency on the userís connection.), PE
+@attribute NFR26 {0,1}
+
+% 8,27, While streaming a movie  buffering should only occur if there is latency in the userís connection., PE
+@attribute NFR27 {0,1}
+
+% 8,28, All credit card information will be secured on the server  and only accessible by authorized Izogn administrators.  Information will be encrypted in the database. SE
+@attribute NFR28 {0,1}
+
+% 8,29, The website shall be available for use 24 hours per day  365 days per year., A
+@attribute NFR29 {0,1} %General assumption
+
+% 8,30, The website shall achieve 99.5% up time., A
+@attribute NFR30 {0,1} %General assumption
+
+% 8,31, All movies shall be streamed on demand  at any time of the day., A
+@attribute NFR31 {0,1} %General assumption
+
+% 8,32, The website shall continue to operate if the streaming server goes down., FT
+@attribute NFR32 {0,1} %General assumption
+
+% 8,33, The website shall continue to operate if the payment gateway goes down., FT
+@attribute NFR33 {0,1} %General assumption
+
+% 8,34, The streaming server will support 50 simultaneous streaming connections., SC
+@attribute NFR34 {0,1} %General assumption
+
+% 8,35, The streaming server will support a maximum of 700 movies; new servers can be added to support more movies., SC
+@attribute NFR35 {0,1} %General assumption
+
+% 8,36, The server will support a maximum of 1 000 simultaneous users., SC
+@attribute NFR36 {0,1} %General assumption
+
+% 8,37, The website shall be capable of supporting 100 000 customers., SC
+@attribute NFR37 {0,1} %General assumption
+
+% 8,38,  The product shall be expected to operate within the maximum maintenance budget for a minimum of 2 years., MN
+@attribute NFR38 {0,1} %General assumption
+
+% 8,39, All aspects of the website shall be accessed by a web browser over the Internet., O
+@attribute NFR39 {0,1} %General assumption
+
+% 8,40, The same hardware supporting the current website will be used to support the new system., O
+@attribute NFR40 {0,1} %General assumption
+
+% 8,41, We must be able to interface with the following browsers: IE 5.X  6.0  Netscape 6.x  7.x  8.x and Firefox 1.0., O
+@attribute NFR41 {0,1} %General assumption
+
+% 8,42, Website must interface with the CyberSource API to process credit card transactions., O
+@attribute NFR42 {0,1} %General assumption
+
+% 8,43, Website must be fully operational with MSN TV2., O
+@attribute NFR43 {0,1} %General assumption
+
+% 8,44, Movies shall be encoded and streamed via Windows Media Player 9.0., O
+@attribute NFR44 {0,1} %General assumption
+
+% 8,45, Movies shall be encoded for 56k and 256k streams., O
+@attribute NFR45 {0,1} %General assumption
+
+% 8,46, Promotional updates to the website should take a day to update., MN
+@attribute NFR46 {0,1} %General assumption
+
+% 8,47, Izogn Administrator must be able to update the category listings on the website within 2 minutes., PE
+@attribute NFR47 {0,1}
+
+% 8,48, Izogn Administrator must be able to add new products to the website within 2 minutes.
+@attribute NFR48 {0,1}  %General assumption
+
+% 8,49, The system will provide a 24 hour 800 toll free number for support to its customers., A
+@attribute NFR49 {0,1}  %General assumption
+
+% 8,50, The website will provide a help section with answers and solutions to common problems., US
+@attribute NFR50 {0,1} %General assumption
+
+% 8,51, Velkat staff will be available for phone support between 7am-7pm  M-F to provide technical support to the Izogn administrators., A
+@attribute NFR51 {0,1} %General assumption
+
+% 8,52, The product shall be able to be installed in the specified environment within 1 working day., O
+@attribute NFR52 {0,1} %General assumption
+
+% 8,53, Only registered customers can purchase streaming movies., SE
+@attribute NFR53 {0,1}
+
+% 8,54, A customer can only stream a movie if they purchased it  and are within the 2 day viewing period., SE
+@attribute NFR54 {0,1}
+
+% 8,55, Only authorized personnel can access customer records in the database., SE
+@attribute NFR55 {0,1} %General assumption
+
+% 5,56, Only administrators can activate a pre-paid card., SE
+@attribute NFR56 {0,1} %General assumption
+
+% 5,57, Only authorized personnel can access sales information., SE
+@attribute NFR57 {0,1} %General assumption
+
+% 5,58, The website shall prevent its data from being corrupted when incorrect data is entered in., SE
+@attribute NFR58 {0,1} %General assumption
+
+% 5,59, The website shall protect itself from intentional abuse  and notify the administrator at all occurrences., SE
+@attribute NFR59 {0,1} %General assumption
+
+% 5,60, Data integrity scripts will be run on a weekly basis to verify the integrity of the database., SE
+@attribute NFR60 {0,1} %General assumption
+
+
+% 8,61, The website shall make its user aware of its information practices before collection data from them via a Privacy Policy  accessible on all pages of the website., SE
+@attribute NFR61 {0,1} %General assumption
+
+% 8,62, The system shall notify customers of changes to its information policy., SE
+@attribute NFR62 {0,1} %General assumption
+
+% 8,63, The system shall reveal private information only in compliance with the organizationís information policy., SE
+@attribute NFR63 {0,1} %General assumption
+
+% 8,64, All customer information will be stored on a secure database  accessible only to authorized personnel., SE
+@attribute NFR64 {0,1} %General assumption
+
+% 8,65, All credit card information will be encrypted in the database., SE
+@attribute NFR65 {0,1} %General assumption
+
+% 8,66, The streaming server will have anti-virus software to prevent infection of malicious viruses., SE
+@attribute NFR66 {0,1}  %General assumption
+
+% 8,67, The website should cater to all tribes in Nigeria., LF
+@attribute NFR67 {0,1} %General assumption
+
+% 8,68, The website shall not be offensive to religious or ethnic groups.. LF
+@attribute NFR68 {0,1} %General assumption
+
+% 8,69, The website should appeal to all Africans  not only Nigerians., LF
+@attribute NFR69 {0,1}
+
+% 8,70, The website should use Flash to provide animation on the home page., O
+@attribute NFR70 {0,1}
+
+% 8,71, IzognMovies shall meet the licensing requirements set forth by the appropriate organizations in order to stream African movies., L
+@attribute NFR71 {0,1} %General assumption
+
+% 8,72, The website will comply with W3C standards., L
+@attribute NFR72 {0,1} %General assumption
+ 
+% 8,73, The PHP code will comply with PEAR standards., L
+@attribute NFR73 {0,1} %General assumption
+
+%
+% An example of how to interpret the trace matrix below is
+% R74,0,0,0,0,1,0,0,0,0,… means that "R9 traces only to R5,R24" as listed in the NFR data set.
+% 
+% The actual requirements correspond to the line numbers indicated by the numbers relative to the project number. 
+% For example, if this is Project 8, R74 would be the 74th line for the data listed that starts with '8' (i.e. for Project 8)
+% which is:
+%
+% 8,74,' The website will allow customers to search for movies by title  actor  or director.',F
+%
+%
+
+@data
+
+% 8,74, The website will allow customers to search for movies by title  actor  or director., F
+R74,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+
+% 8,75, viewing a movie details  the website will display the movies description  actor  and director entered in by the administrator., F
+R75,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+
+% 8,76, Website shall request  and authorize credit card payment before allowing a user to stream a movie., F
+R76,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+
+% 8,77, shall be able to stream purchased movie via Windows Media Player  for up to 2 days aftere purchase date., F
+R77,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+
+% 8,78, Website shall allow customers to browse movies by categories entered in by izogn administrator., F
+R78,0,0,0,0,1,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+
+% 8,79, Website shall allow customers to view reviews of selected movies by other customers., F
+R79,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+
+% 8,80, Website shall allow customers to add their own movie review for a selected movie., F
+R80,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+
+% 8,81, Website shall allow the Izogn administrator to approve a review posted by a customer., F
+R81,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+
+% 8,82, System will allow customers to pay for a streaming movie with a pre-paid card., F
+R82,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+
+%8,83, Website shall allow customers to purchase pre-paid cards of $5  $10  or $20 value either by credit card or mail-in payment option., F
+R83,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+
+% 8,84, System shall automatically update the main page of the website every Friday  and show the 4 latest movies that have been added to the website., F
+R84,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+
+% 8,85, System shall allow users to update their billing and contact information via the ìMy Accountî section of the website., F
+R85,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+
+% 8,86, Pre-paid cards shall be distributed via email  or via a printed paper card., F
+R86,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+
+% 8,87, Only registered customers can purchase streaming movies., F
+R87,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,1,0,0,0,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+
+% 8,88, Movies can only be streamed if the customer has purchased a movie  and is within the 2-day time period to stream the movie., F
+R88,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+
+% 8,89, Website must be able to support free trial periods with various parameters set by the Izogn Manager., F
+R89,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+
+% 8, 90, All streaming movie sales will be logged in the database  and accessible by the administrator., F
+R90,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+
+% 8,91, All registered customer information shall be stored and maintained in the database  even after the customer cancels their account., F
+R91,0,0,1,1,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+
+% 8,92, Daily usage statistics should be logged  and accessible by the administrator., F
+R92,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+% 8,93, The owner shall have free access to all of the streaming movies.,F
+R93,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+

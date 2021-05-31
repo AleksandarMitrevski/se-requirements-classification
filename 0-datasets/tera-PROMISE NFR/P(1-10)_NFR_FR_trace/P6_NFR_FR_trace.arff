@@ -1,0 +1,286 @@
+@relation P6_NFR_FR_trace
+% Manual trace timing: 47 min/person	
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% This is a PROMISE Software Engineering Repository data set made publicly
+% available in order to encourage repeatable, verifiable, refutable, and/or
+% improvable predictive models of software engineering.
+%
+% If you publish material based on PROMISE data sets then, please
+% follow the acknowledgment guidelines posted on the PROMISE repository
+% web page http://promisedata.org/repository .
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% (c) 2010 XXXX
+% This data set is distributed under the
+% Creative Commons Attribution-Share Alike 3.0 License
+% http://creativecommons.org/licenses/by-sa/3.0/
+%
+% You are free:
+%
+%    * to Share -- copy, distribute and transmit the work
+%    * to Remix -- to adapt the work
+%
+% Under the following conditions:
+%
+% Attribution. You must attribute the work in the manner specified by
+% the author or licensor (but not in any way that suggests that they endorse
+% you or your use of the work).
+%
+% Share Alike. If you alter, transform, or build upon this work, you
+% may distribute the resulting work only under the same, similar or a 
+% compatible license.
+%
+%    * For any reuse or distribution, you must make clear to others the 
+%      license terms of this work.
+%    * Any of the above conditions can be waived if you get permission from 
+%      the copyright holder.
+%    * Apart from the remix rights granted under this license, nothing in 
+%      this license impairs or restricts the author's moral rights.
+%
+
+
+% 
+% The FR attribute is the set of the functional requirements specified in the project (type F)
+% The requirement number corresponds to the NFR data set project requirements according to the order
+% they appear there. Since the non-functional requirements appear first in this data set, the functional
+% requirements numbering do not begin at 1 (but exactly in the position the functional requirements
+% begin). For Project 6 in the NFR data set the first 47 requirements listed are nonfunctional, so 
+% the functional requirements number starts with R48.
+%
+
+
+@attribute FR {R48,R49,R50,R51,R52,R53,R54,R55,R56,R57,R58,R59,R60,R61,R62,R63,R64,R65,R66,R67,R68,R69,R70,R71,R72,R73,R74}
+
+%
+% The attributes below are the set of non-functional requirements (types A,L,LF,MN,O,PE,SC,SE,US,FT,PO). 
+% The non-functional requirements are listed first in the NFR data set so the numbering below matches the 
+% order the requirements are listed in the NFR data set for this project. The data here represents if this
+% non-functional requirement traces = 0, or does not trace = 1 (sometimes called anti-trace) to a given 
+% functional requirement.
+% 
+
+% 6,1, The product must work with most database management systems (DBMS) on the market  whether the DBMS is colocated with the product on the same machine or is located on a different machine on the computer network., O
+@attribute NFR1 {0,1}
+
+% 6,2, The product will function alongside server software on any operating system where the Java runtime can be installed., O
+@attribute NFR2 {0,1}  % General assumption
+
+% 6,3, The product will require collaboration with a database management system (DBMS).  The DBMS may be located on the same machine as the product or on a separate machine residing on the same computer network.,O
+@attribute NFR3 {0,1}
+
+% 6,4, The product must make use of web/application server technology.  Open source examples include Apache web server  Tomcat  and the JBoss application server., O
+@attribute NRR4 {0,1} % General assumption 
+
+% 6,5, A database management system such as Oracle  DB2  MySql or HSQL will need to be integrated with the product., O
+@attribute NFR5 {0,1}
+
+% 6,6, The productís Look and Feel shall be able to incorporate aspects of the customerís organization such as logo  branding  and identity, LF
+@attribute NFR6 {0,1} % General assumption 
+
+% 6,7, The product shall have a conservative and professional appearance., LF
+@attribute NFR7 {0,1} % General assumption 
+
+% 6,8, The product shall make the users want to use it. 80% of the users surveyed report they are regularly using the product after the first 2 weeks post-launch., US
+@attribute NFR8 {0,1} % General assumption 
+
+% 6,9, The product shall be easy to use. 90% of users will be able to successfully reserve a conference room within 5 minutes of product use., US
+@attribute NFR9 {0,1}
+
+% 6,10, The product shall give users feedback when necessary. 80% of the users surveyed report that the product accurately confirms their actions., US
+@attribute NFR10 {0,1} % General assumption 
+
+% 6,11, The product shall allow the user to select a chosen language from one of the target market countries., US
+@attribute NFR11 {0,1} % General assumption 
+
+% 6,12, The product shall allow for customization of start page and views preferences., US
+@attribute NFR12 {0,1}
+
+% 6,13, An employee will be able to successfully use the product within a few minutes.  After informally navigating the product for less than 15 minutes  users shall be able to successfully setup meetings and reserve conference rooms., US
+@attribute NFR13 {0,1} % General assumption 
+
+% 6,14, The product shall use a standard navigation menu familiar to most web users., US
+@attribute NFR14 {0,1} % General assumption 
+
+% 6,15, The product shall allow for intuitive searching of available conference rooms., US
+@attribute NFR15 {0,1}
+
+% 6,16, The product shall conform to the Americans with Disabilities Act., US
+@attribute NFR16 {0,1}% General assumption 
+
+% 6,17, The response shall be fast enough to avoid interrupting the userís flow of thought.  90% of tasks shall complete within 5 seconds.  98% of tasks shall complete within 8 seconds., PE
+@attribute NFR17 {0,1}% General assumption 
+
+% 6,18, Aside from server failure  the software product shall achieve 99.99% up time., A
+@attribute NFR18 {0,1}% General assumption 
+
+% 6,19, The product shall create an exception log of problems encountered within the product for transmission to our company for analysis and resolution., FT
+@attribute NFR19 {0,1}% General assumption 
+
+% 6,20, The product shall be capable of handling up to 1 000 concurrent requests.  This number will increase to 2 000 by Release 2.  The concurrency capacity must be able to handle peak scheduling times such as early morning and late afternoon hours., SC
+@attribute NFR20 {0,1}% General assumption 
+
+% 6,21, The product shall be able to process 10 000 transactions per hour within two years of its launch.  This number will increase to 20 000 by Release 2., SC
+@attribute NFR21 {0,1}% General assumption 
+
+% 6,22, The product shall be expected to operate for at least 5 years for each customer installation., SC
+@attribute NFR22 {0,1}% General assumption 
+
+% 6,23, The product shall be used in office environments., O
+@attribute NFR23 {0,1}% General assumption 
+
+% 6,24, The product must be able to interface with any HTML browser.  The product shall transmit data between the user and the product without problems. The product shall display HTML properly in 80% of all HTML browsers tested (minimum is to test 8 browsers)., O
+@attribute NFR24 {0,1}% General assumption 
+
+% 6,25, The product must be able to interface with various database management systems. The product shall communicate successfully with the database management system on 100% of all transactions., O
+@attribute NFR25 {0,1}
+
+% 6,26, The product must be able to interface with various email servers. The product shall be able to send email., O
+@attribute NFR26 {0,1}
+
+% 6,27, The product shall be available for distribution via the Internet as a binary or ZIP file., O
+@attribute NFR27 {0,1}% General assumption 
+
+% 6,28, The product shall be available for distribution as a packaged CD., O
+@attribute NFR28 {0,1}% General assumption 
+
+% 6,29, The product will be available for licensing as a one-server  two-five servers  or five-or-more servers license., O
+@attribute NFR29 {0,1}% General assumption 
+
+% 6,30, A new user must be able to be added to the system within 10 minutes.  90% of new users are able to log into the system within 10 minutes., US
+@attribute NFR30 {0,1}% General assumption 
+
+% 6,31, The product must be designed using Design Patterns and coding best practices.  90% of maintenance software developers are able to integrate new functionality into the product with 2 working days., MN
+@attribute NFR31 {0,1} % General assumption 
+
+% 6,32, The product must be highly configurable for use with various database management systems for the end users.  80% of end users are able to integrate new database management systems with the product without changing the productís software code., MN
+@attribute NFR32 {0,1} % General assumption 
+
+% 6,33, Maintenance releases will be offered to customers once a year.  The releases shall take no longer than 5 minutes for 80% of the customer base to install., MN
+@attribute NFR33 {0,1} % General assumption 
+
+% 6,34, Every registered user will have access to the productís support site via the Internet.  70% of registered users shall find a solution to their problem within 5 minutes of using the support site., US
+@attribute NFR34 {0,1} % General assumption 
+
+% 6,35, The customer shall be able to easily integrate new building maps with the product throughout the productís lifecycle.  Integration of new maps with the product shall be possible with little to no support from product support staff., MN 
+@attribute NFR35 {0,1}
+
+% 6,36, The product shall be translated into foreign languages other than the target market countriesí languages in future releases.  For each emerging target market  it shall take no more than 5 days to configure the product for that marketís language., US
+@attribute NFR36 {0,1} % General assumption 
+
+% 6,37, The product is expected to integrate with multiple database management systems.  The product will operate with Oracle  SQL Server  DB2  MySQL  HSQL  and MS Access., O
+@attribute NFR37 {0,1}
+
+% 6,38, The product shall be able to be installed in any operating environment within 2 days., O
+@attribute NFR38 {0,1}
+
+% 6,39, The product shall ensure that only company employees or external users with company-approved user IDs may have product access.  100% of all logons shall be by either company employees or external users with company-approved user IDs., SE
+@attribute NFR39 {0,1} % General assumption 
+
+% 6,40, Only managers are able to perform search queries for reservations by user.  100% of all search queries for reservations by user shall be from logons of only management logons., SE
+@attribute NFR40 {0,1}  % General assumption 
+
+% 6,41, The product shall ensure that the databaseís data corresponds to the data entered by the user.  Each conference room reservation in the system will contain the same information as was entered by the user., SE
+@attribute NFR41 {0,1}
+
+% 6,42, The product shall prevent the input of malicious data.  The product and/or adjacent hardware/software systemsí data shall remain 100% uncorrupted each time malicious data is input into the product., SE
+@attribute NFR42 {0,1}  % General assumption 
+
+% 6,43, The product and/or dependent databases/filesystems shall remain operational as a result of the input of malicious data.  The product and/or dependent databases/filesystems shall not crash 100% of the time that malicious data is input into the product., FT
+@attribute NFR43 {0,1}  % General assumption 
+
+% 6,44, The product shall have the ability to receive automatic software updates as new threats emerge.  100% of customers will be able to receive automatic software updates transmitted to the installed product., SE
+@attribute NFR44 {0,1} % General assumption 
+
+% 6,45, The language of the product shall accommodate all of the target market countries. 90% of survey respondents from each target market country will find that the language of the product is acceptable., SC
+@attribute NFR45 {0,1}
+
+% 6,46, The product shall be able to display calendar dates and times according to the userís locale.  90% of survey respondents from each target market country will find that the date and time formatting of the product is correct., US
+@attribute NFR46 {0,1} % General assumption 
+
+% 6,47, The product must be developed with the J2SE/J2EE programming language libraries, O
+@attribute NFR47 {0,1}
+
+@data
+% 6,48, The product shall record meeting entries., F
+R48,1,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+
+% 6,49, The product will notify employees of meeting invitations., F
+R49,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+
+% 6,50, The product shall have the ability to send meeting reminders to employees., F
+R50,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+
+% 6,51, The product shall assign the organizers contact information to each meeting they create., F
+R51,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+% 6,52, The product will record meeting acknowledgements., F
+R52,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+
+% 6,53, The product shall store new conference rooms., F
+R53,1,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+
+% 6,54, The product shall update existing conference rooms., F
+R54,1,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+
+% 6,55, The product will be able to delete conference rooms, F
+R55,1,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+
+% 6,56, The product shall be able to store new room equipment., F
+R56,1,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+
+% 6,57, The product will update existing room equipment., F
+R57,1,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+
+% 6,58, The product shall be able to delete room equipment., F
+R58,1,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+
+% 6,59, The product shall allow an organizer to invite other employees to meetings., F
+R59,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+
+% 6,60, Each time a conference room is reserved  the conference room schedule shall be updated to reflect the time and date of the reservation., F
+R60,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0
+
+% 6,61, The product shall record the transportation status of equipment reserved., F
+R61,1,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+
+% 6,62, The product shall display a map of the company building showing conference room locations., F
+R62,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+
+% 6,63, The product shall record updated meeting agendas., F
+R63,1,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+
+
+% 6,64, The product shall send a meeting confirmation to the meeting organizer., F
+R64,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+
+% 6,65, The product shall display room equipment according to search parameters., F
+R65,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+
+% 6,66, The product shall display room equipment according to search parameters., F
+R66,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+
+% 6,67, The product shall record different meeting types., F
+R67,1,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+
+% 6,68, The product shall record all the equipment that has been reserved., F
+R68,1,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+
+% 6,69, The product shall notify building personnel of equipment transport requests., F
+R69,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+
+% 6,70, The product will allow priviledged users to view meeting schedules in multiple reporting views., F
+R70,1,0,1,0,1,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+
+% 6,71, The product shall be able to send meeting notifications via different kinds of end-user specified methods., F
+R71,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+
+% 6,72, The product shall have a customizable Look and Feel., F
+R72,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+
+% 6,73, The product shall have an intuitive user interface., F
+R73,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+
+% 6,74, The product will display an available status for unreserved conference rooms., F
+R74,0,0,0,0,0,0,0,0,1,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+

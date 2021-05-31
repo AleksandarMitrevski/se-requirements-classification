@@ -1,0 +1,239 @@
+@relation P4_NFR_FR_trace
+
+% Manual trace timing: 4 hours and 50 mins /person
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% This is a PROMISE Software Engineering Repository data set made publicly
+% available in order to encourage repeatable, verifiable, refutable, and/or
+% improvable predictive models of software engineering.
+%
+% If you publish material based on PROMISE data sets then, please
+% follow the acknowledgment guidelines posted on the PROMISE repository
+% web page http://promisedata.org/repository .
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% (c) 2010 XXXX
+% This data set is distributed under the
+% Creative Commons Attribution-Share Alike 3.0 License
+% http://creativecommons.org/licenses/by-sa/3.0/
+%
+% You are free:
+%
+%    * to Share -- copy, distribute and transmit the work
+%    * to Remix -- to adapt the work
+%
+% Under the following conditions:
+%
+% Attribution. You must attribute the work in the manner specified by
+% the author or licensor (but not in any way that suggests that they endorse
+% you or your use of the work).
+%
+% Share Alike. If you alter, transform, or build upon this work, you
+% may distribute the resulting work only under the same, similar or a 
+% compatible license.
+%
+%    * For any reuse or distribution, you must make clear to others the 
+%      license terms of this work.
+%    * Any of the above conditions can be waived if you get permission from 
+%      the copyright holder.
+%    * Apart from the remix rights granted under this license, nothing in 
+%      this license impairs or restricts the author's moral rights.
+%
+
+
+% 
+% The FR attribute is the set of the functional requirements specified in the project (type F)
+% The requirement number corresponds to the NFR data set project requirements according to the order
+% they appear there. Since the non-functional requirements appear first in this data set, the functional
+% requirements numbering do not begin at 1 (but exactly in the position the functional requirements
+% begin). For Project 4 in the NFR data set the first 30 requirements listed are nonfunctional, so 
+% the functional requirements number starts with R31.
+%
+
+@attribute FR {R31,R32,R33,R34,R35,R36,R37,R38,R39,R40,R41,R42,R43,R44,R45,R46,R47,R48,R49,R50,R51,R52,R53,R54,R55}
+%
+% The attributes below are the set of non-functional requirements (types A,L,LF,MN,O,PE,SC,SE,US,FT,PO). 
+% The non-functional requirements are listed first in the NFR data set so the numbering below matches the 
+% order the requirements are listed in the NFR data set for this project. The data here represents if this
+% non-functional requirement traces = 0, or does not trace = 1 (sometimes called anti-trace) to a given 
+% functional requirement.
+% 
+% 4,1, The Disputes application shall comply with the corporate standards for user interface creation for internally and externally used applications., LF
+@attribute NFR1 {0,1}
+
+% 4,2, All screens created as part of the Disputes application must comply with corporate standards for interface creation., LF
+@attribute NFR2 {0,1}
+
+% 4,3, The list of dispute cases that are displayed after a search is performed must be color coded for easy identification of dispute cases based upon the dispute case status., US
+@attribute NFR3 {0,1}
+
+% 4,4, 100% of the cardmember and merchant services representatives shall use the Disputes application regularly after a 2-day training course., US
+@attribute NFR4 {0,1}
+
+% 4,5, 100% of cardmember services representatives shall be able to successfully create a dispute case on the first encounter after completing the training course., US
+@attribute NFR5 {0,1}
+
+% 4,6, 100% of merchant services representatives shall be able to successfully perform a follow up action on a dispute case on the first encounter after completing the training course., US
+@attribute NFR6 {0,1}
+
+% 4,7, The maximum wait time for a user navigating from one screen to another within the Disputes application shall be no more than 5 seconds., PE
+@attribute NFR7 {0,1}
+
+% 4,8, The Disputes application shall support 350 concurrent users without any degradation of performance in the application., PE
+@attribute NFR8 {0,1} % A general consideration for system!
+
+% 4,9, The Disputes application shall be available 24x7x365  with the exception of the following scheduled maintenance windows.  Monday ñ Saturday 3:00am to 4:00am EST Sunday 1:00amd to 5:00am EST, O
+@attribute NFR9 {0,1} % A general consideration for system!
+
+% 4,10, The Disputes application shall interface with the Statement Database. The Statement Database provides the transaction details to the Disputes System. All transaction details must be obtained from the Statement Database, O
+@attribute NFR10 {0,1} % A general consideration for system!
+
+% 4,11, The Disputes application shall interface with the Cardmember Information Database.  The Cardmember Information Database provides detailed information with regard to a cardmember.  All cardmember detail information must be obtained from the Cardmember Information Database., O
+@attribute NFR11 {0,1}
+
+% 4,12, The Disputes applications shall interface with the Merchant Information Database.  The Merchant Information Database provides detailed information with regard to the merchant. All merchant detail information shall be obtained from the Merchant Information Database., O
+@attribute NFR12 {0,1}
+
+% 4,13, The Disputes application shall interface with the Letters application.  This will allow the Disputes application to request letters as part of the dispute initiation and dispute follow up process. All letter requests must be sent to the Print Letter Utility application., O 
+@attribute NFR13 {0,1}
+
+% 4,14, The Disputes application shall interface with the Cardmember Posting and Billing System.  This will allow the Disputes application to request adjustments to cardmember and merchantís accounts. All adjustment requests must be sent to the Cardmember Posting and Billing System., O 
+@attribute NFR14 {0,1}
+
+% 4,15, The Disputes application shall ensure that only users with the appropriate access level are allowed to initiate dispute requests., SE
+@attribute NFR15 {0,1}
+
+% 4,16, Only users with Update access must be able to initiate dispute requests., SE
+@attribute NFR16 {0,1}
+
+% 4,17, The Disputes application shall ensure that only authorized users are allowed to logon to the application., SE
+@attribute NFR17 {0,1}
+
+% 4,18, All authorized users  once authenticated must be able to logon to the Disputes System, SE
+@attribute NFR18 {0,1}
+
+% 4,19, The Disputes System shall generate a User Report that details any new users that have been added and any changes to an existing userís access level.  The report will be reviewed for auditing purposes., SE
+@attribute NFR19 {0,1}
+
+% 4,20, All additions of new users and modifications to userís access shall be recorded on the User Report., SE
+@attribute NFR20 {0,1}
+
+% 4,21, If a user account is revoked  it can only be re-instantiated by the System Administrator., SE
+@attribute NFR21 {0,1} % System Assumption- No specific F related!
+
+% 4,22, Only the System Administrator shall be able to reset a revoked user logon account, SE
+@attribute NFR22 {0,1} % System Assumption- No specific F related!
+
+% 4,23, The Disputes application shall manipulate and view business data. Users will not have direct access to data files or databases., SE
+@attribute NFR23 {0,1} % System Assumption- No specific F related!
+
+% 4,24, All updates to data files or database must be initiated from the Disputes System., SE
+@attribute NFR24 {0,1} % System Assumption- No specific F related!
+
+% 4,25, The Disputes application must conform to the legal requirements as specified by the Merchant Operating Regulations., L
+@attribute NFR25 {0,1}
+
+% 4,26, All business rules specified in the Disputes System shall be in compliance with the Merchant Operating Regulations., L
+@attribute NFR26 {0,1}
+
+% 4,27, The Disputes application must conform to the legal requirements as specified by Regulation E and Regulation Z that govern credit card disputes processing., L
+@attribute NFR27 {0,1} % General assumption
+
+% 4,28, All business rules specified in the Disputes System shall be in compliance to the guidelines of Regulation E and Regulation Z., L
+@attribute NFR28 {0,1} % General assumption.
+
+% 4,29, The Disputes application must maintain a detailed history of every action that a user takes on a dispute case.  This ensures a complete audit trail if questions arise later on with regard to a particular dispute case., L
+@attribute NFR29 {0,1}
+
+% 4,30, All actions that modify an existing dispute case must be recorded in the case history., L
+@attribute NFR30 {0,1}
+%
+% An example of how to interpret the trace matrix below is
+% R31,1,0,0,1,0,1,0,0,0,0,1,1,1,0,0,0,0,1,0,0,0,0,0,0,1,0,0,0,0,0
+% means that "R31 traces only to R1,R4,R6,R11,R12,R13,R18,R25" as listed in the NFR data set.
+% 
+% The actual requirements correspond to the line numbers indicated by the numbers relative to the project number. 
+% For example, if this is Project 4, R31 would be the 31st line for the data listed that starts with '4' (i.e. for Project 4)
+% which is:
+%
+% 31,' The Disputes System must be accessible by both internal and external users.',F
+%
+%
+@data
+
+% 4,31, The Disputes System must be accessible by both internal and external users., F
+R31,1,0,0,1,0,1,0,0,0,0,1,1,1,0,0,0,0,1,0,0,0,0,0,0,1,0,0,0,0,0
+
+% 4,32, The Disputes System must prevent users from accessing any dispute cases that do not belong to their cardholder base., F
+R32,1,0,0,1,1,0,0,0,0,0,1,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0
+
+% 4,33, The Disputes System will facilitate direct data entry of a dispute case via a user interface that supports real time responses to the users., F
+R33,1,1,0,1,1,0,1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+
+% 4,34, The Disputes System must provide different levels of access with regard to disputes case initiation and follow-up actions., F
+R34,1,0,0,0,0,0,0,0,0,1,0,1,0,0,0,0,0,0,1,1,0,0,0,0,1,0,0,0,0,0
+
+% 4,35, The Disputes System shall provide view access capability for authorized users of the application., F
+R35,1,0,0,1,1,0,1,0,0,0,1,1,0,0,0,0,1,1,1,1,0,0,0,0,1,0,0,0,0,0
+
+% 4,36, The Disputes System shall provide update access capability for authorized users of the application., F
+R36,1,0,0,1,1,1,0,0,0,1,1,1,1,0,0,1,0,0,1,1,0,0,0,0,0,0,0,0,0,0
+
+% 4,37, The Disputes System must allow the users to select disputable transactions (based on the age of the transaction) from a user interface and initiate a dispute (ticket retrieval request or chargeback notification) on the selected transaction., F
+R37,1,1,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+
+% 4,38, The Disputes System must provide the user the ability to initiate a single dispute case on multiple transactions that belong to a single merchant., F
+R38,1,0,0,1,1,1,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0
+
+% 4,39, The Disputes System will provide the user the ability to create or initiate a ticket retrieval request.   As part of ticket retrieval creation process the system must prompt the user to enter all the required information to create the ticket retrieval request.  The ticket retrieval request is a document that is sent to merchant inquiring the validity of a transaction., F
+R39,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+
+% 4,40, The Disputes System must allow the user to create three unique types of ticket retrieval requests.  The three types of ticket retrieval requests are (1) Request for original receipt (2) Request for a copy of the receipt or (3) Request for a portfolio. A portfolio consists of documentation that would provide proof of a purchase such as the documentation that is received from a car rental agency that is more than a sales receipt., F
+R40,1,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+
+% 4,41, The Disputes System must prevent external users from requesting original receipts. Requests for original receipts are restricted to internal users., F
+R41,1,0,0,1,1,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+
+% 4,42, The Disputes System must provide a confirmation to the user upon the creation of ticket retrieval request that contains the following information; the dispute case number  the type of retrieval requested (copy  original or portfolio)  and the date that the merchant response is due., F
+R42,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0
+
+% 4,43, The Disputes System shall allow the user to create or initiate a chargeback request.  The system must prompt the user to enter the required information to initiate a chargeback request. The chargeback request results in a printed chargeback notification that is sent to merchant indicating that their account will be charged back if no proof is provided that the disputed transaction is valid., F 
+R43,1,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0
+
+% 4,44, The Disputes System must provide a confirmation to the user upon the creation of a chargeback request. The confirmation must contain the following information; the dispute case number  the type of chargeback requested (pending or immediate)  and the date that the merchant response is due.
+R44,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0
+
+% 4,45, The Disputes System shall prevent the creation of duplicate dispute requests 100% of the time., F
+R45,1,0,0,1,1,0,0,0,0,0,1,1,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+
+% 4,46, The Disputes System shall accurately provide a list of possible reason codes for a given transaction.  The list of possible reason codes must be derived based on the type of transaction and the industry that the merchant belongs to  according to the business rules defined for the Disputes System., F
+R46,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0
+
+% 4,47, The Disputes System must provide the ability to view existing dispute cases., F
+R47,1,1,0,1,0,1,1,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+
+% 4,48, The Disputes System must provide Search functionality.  The search method must include the ability to search by (1) the dispute case number  (2) the merchant account number  (3) the cardmember account number and (4) the issuer number.  In addition to the above criteria  the search functionality must further allow the user to limit the results of the search by a date range  the type of dispute (ticket retrieval request or chargeback notification)  the case status (open  closed or all) and the dispute reason code., F
+R48,1,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+
+% 4,49, A list of all disputes cases that meet the entered search criteria must be provided to the user.  The list of cases must differentiate the type and/or status of the case by color -coding the line item in the list.  For example all open cases will be yellow and all closed cases will be gray., F
+R49,1,1,1,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+
+% 4,50, The Disputes System shall provide the users the ability to view the history of all activities that have occurred on the dispute case., F
+R50,1,0,0,1,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,1,1
+
+% 4,51, The Dispute System shall provide the users with the ability to follow up on a dispute case via follow-up actions.  The list of available follow up actions for a given dispute case must be filtered by the status of the case and the access level of the user., F
+R51,1,0,0,0,0,1,0,0,0,0,1,1,0,0,0,0,0,0,1,0,0,0,0,0,1,0,0,0,0,0
+
+% 4,52, The Disputes System shall record the name of the user and the date for any activity that creates or modifies the disputes case in the system.  A detailed history of the actions taken on the case  including the date and the user that performed the action must be maintained for auditing purposes., F
+R52,1,0,0,1,1,0,0,0,0,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1
+
+% 4,53, For any systematic (non-user initiated) action that occurs on a case such as the disputes aging process  a case activity will be generated.  Upon the next logon the user that initiated the dispute case must be notified that a systematic action has occurred on the dispute case., F
+R53,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+
+% 4,54, All letter requests must be formatted according to guidelines specified by the Print Letter Utility system., F
+R54,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+
+% 4,55. Any disputes cases that have been closed for over 6 months must be purged from the online disputes database., F
+R55,1,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0
+

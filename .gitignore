@@ -1,0 +1,4 @@
+__pycache__/
+*.py[cod]
+*$py.class
+GoogleNews-vectors-negative300.bin

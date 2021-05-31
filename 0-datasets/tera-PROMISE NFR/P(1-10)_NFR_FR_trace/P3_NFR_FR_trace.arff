@@ -1,0 +1,314 @@
+@relation P3_NFR_FR_trace
+
+% Manual trace timing: 2 hours and 41 min/person
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% This is a PROMISE Software Engineering Repository data set made publicly
+% available in order to encourage repeatable, verifiable, refutable, and/or
+% improvable predictive models of software engineering.
+%
+% If you publish material based on PROMISE data sets then, please
+% follow the acknowledgment guidelines posted on the PROMISE repository
+% web page http://promisedata.org/repository .
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% (c) 2010 XXXX
+% This data set is distributed under the
+% Creative Commons Attribution-Share Alike 3.0 License
+% http://creativecommons.org/licenses/by-sa/3.0/
+%
+% You are free:
+%
+%    * to Share -- copy, distribute and transmit the work
+%    * to Remix -- to adapt the work
+%
+% Under the following conditions:
+%
+% Attribution. You must attribute the work in the manner specified by
+% the author or licensor (but not in any way that suggests that they endorse
+% you or your use of the work).
+%
+% Share Alike. If you alter, transform, or build upon this work, you
+% may distribute the resulting work only under the same, similar or a 
+% compatible license.
+%
+%    * For any reuse or distribution, you must make clear to others the 
+%      license terms of this work.
+%    * Any of the above conditions can be waived if you get permission from 
+%      the copyright holder.
+%    * Apart from the remix rights granted under this license, nothing in 
+%      this license impairs or restricts the author's moral rights.
+%
+
+
+% 
+% The FR attribute is the set of the functional requirements specified in the project (type F)
+% The requirement number corresponds to the NFR data set project requirements according to the order
+% they appear there. Since the non-functional requirements appear first in this data set, the functional
+% requirements numbering do not begin at 1 (but exactly in the position the functional requirements
+% begin). For Project 3 in the NFR data set the first 33 requirements listed are nonfunctional, so 
+% the functional requirements number starts with R34.
+%
+
+
+@attribute FR {R34,R35,R36,R37,R38,R39,R40,R41,R42,R43,R44,R45,R46,R47,R48,R49,R50,R51,R52,R53,R54,R55,R56,R57,R58,R59,R60,R61,R62,R63,R64,R65,R66,R67,R68,R69,R70,R71,R72,R73,R74,R75,R76,R77,R78,R79,R80}
+%
+% The attributes below are the set of non-functional requirements (types A,L,LF,MN,O,PE,SC,SE,US,FT,PO). 
+% The non-functional requirements are listed first in the NFR data set so the numbering below matches the 
+% order the requirements are listed in the NFR data set for this project. The data here represents if this
+% non-functional requirement traces = 0, or does not trace = 1 (sometimes called anti-trace) to a given 
+% functional requirement.
+% 
+% 3,1, The system shall be easy to use by the Program Administrators/Nursing Staff Members., US
+@attribute NFR1 {0,1}
+
+% 3,2, All of the users shall be able to use the system after one day of training., US
+@attribute NFR2 {0,1}
+
+% 3,3, The system shall help the user avoid making mistakes while scheduling classes and clinicals for the nursing students., US
+@attribute NFR3 {0,1}
+
+% 3,4, The number of mistakes noted by the students shall be decreased by 50% in the first year., US
+@attribute NFR4 {0}
+
+% 3,5, The system shall be intuitive to the Program Administrators/ Nursing Staff Members., US
+@attribute NFR5 {0,1}
+
+% 3,6, 2 out of 3 Program Administrators/Nursing Staff Members shall successfully be able to use the system to manage the scheduling of classes and clinicals., US
+@attribute NFR6 {0,1}
+
+% 3,7, The system shall use symbols and words that are naturally understandable by the user community., US
+@attribute NFR7 {0,1}
+
+% 3,8, The verbiage used within the system shall be consistent with Standard English and the terminology of the national Nursing Community., US
+@attribute NFR8 {0,1}
+
+% 3,9, Staff members shall be able to complete a set of tasks in a timely manner., PE
+@attribute NFR9 {0,1}
+
+% 3,10, The response time of general student management tasks shall take no longer than 5 seconds and the response time of schedule generation shall take no longer than 30 seconds., PE
+@attribute NFR10 {0,1}
+
+% 3,11, The system shall be available for use between the hours of 8am and 6pm., A
+@attribute NFR11 {0,1}
+
+% 3,12, The system shall achieve 95% up time., A
+@attribute NFR12 {0,1}
+
+% 3,13, system shall be able to handle all of the user requests/usage during business hours., SC
+@attribute NFR13 {0,1}
+
+% 3,14, The system shall cater to 10 simultaneous users from 9am to 5pm., SC
+@attribute NFR14 {0,1} % General assumpstion!
+
+%3,15, The system shall be capable of processing 100% of nursing students and their classes for the next 10 years., SC
+@attribute NFR15 {0,1}
+
+% 3,16, The system shall be expected to manage the nursing program curriculum and class/clinical scheduling for a minimum of 5 years., SC
+@attribute NFR16 {0} % General assumpstion!
+
+% 3,17, The system shall able to operate within a business office environment typical of the Nursing Department at DePaul University., O
+@attribute NFR17 {0,1}
+
+% 3,18, The system shall be used within the specifications defined by the computers used by the Program Administrators/Nursing Staff Members., O
+@attribute NFR18 {0,1}
+
+% 3,19, The system shall operate within the Windows XP Professional operating system., O
+@attribute NFR19 {0,1} % General assumpstion!
+
+% 3,20, The system shall interface with CampusConnectís central server, O
+@attribute NFR20 {0,1} % General assumpstion!
+
+% 3,21, The system shall interface with the faculty central server., O
+@attribute NFR21 {0,1} % General assumpstion!
+% 3,22, The system shall interface with the student master server., O
+@attribute NFR22 {0,1} % General assumpstion!
+
+% 3,23, We must be able to interface with any HTML browser., O
+@attribute NFR23 {0,1} % General assumpstion!
+
+% 3,24, Only authorized users shall have access to clinical site information., SE
+@attribute NFR24 {0,1}
+
+% 3,25, Program Administrators/Nursing Staff Members are the only people who shall have access to clinical site details., SE
+@attribute NFR25 {0,1}
+
+% 3,26, Only authorized users shall have access to studentsí personal information., SE
+@attribute NFR26 {0,1}
+
+% 3, 27, Dr Susan Poslusny and Dr Julie Donalek are the only people who shall have access to studentsí personal information., SE
+@attribute NFR27 {0,1}
+
+% 3,28, Only authorized users shall have access to the portion of the system that interfaces with CampusConnect., SE
+@attribute NFR28 {0,1} % General assumpstion!
+
+% 3,29, Fit Criterion: Dr Susan Poslusny and Karen Sysol are the only people who shall have access to the final class section scheduling for the system that interfaces with CampusConnect., SE
+@attribute NFR29 {0,1} % General assumpstion!
+
+% 3,30, The system shall have basic data integrity checking to reduce the possibility of incorrect or invalid data being introduced., SE
+@attribute NFR30 {0,1} % General assumpstion!
+
+% 3,31, The system shall protect private information in accordance with the organizationís information policy., SE
+@attribute NFR31 {0,1} % General assumpstion!
+
+% 3,32, The system shall be built such that it is as secure as possible from malicious interference., SE
+@attribute NFR32 {0,1} % General assumpstion!
+
+% 3,33, The system shall use the organizationís standard virus protection software to help monitor threats to itself., SE
+@attribute NFR33 {0,1} % General assumpstion!
+
+% An example of how to interpret the trace matrix below is
+% R34,1,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+% means that "R934 traces only to R1,R15,R17,R18" as listed in the NFR %data set.
+% 
+% The actual requirements correspond to the line numbers indicated by the numbers relative to the project number. 
+% For example, if this is Project 1, R34 would be the 34th line for the data listed that starts with '1' (i.e. for Project 1)
+% which is:
+%
+% 3,34,' A cohort shall be associated to one Program of Study offered by the department.', F
+%
+%
+
+@data
+
+%3,34, A cohort shall be associated to one Program of Study offered by the department., F
+R34,1,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+
+% 3,35, Program Administrators and Nursing Staff Members shall be able to add a listing of students to a cohort., F
+R35,1,1,0,0,1,1,0,0,1,0,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0
+
+% 3,36, Program Administrators and Nursing Staff Members shall be able to add a single student to a cohort, F
+R36,1,1,0,0,1,1,0,0,1,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0
+
+% 3,37, Students added to a cohort shall be eligible for the cohortís Program of Study., F
+R37,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0
+
+% 3,38, Program Administrators and Nursing Staff Members shall be able to specify the preferred sequence of classes for a given cohort., F
+R38,0,1,0,0,1,0,0,0,0,0,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+
+% 3,39, For each class within a sequence for a cohort  Program Administrators and Nursing Staff Members shall be able to specify which quarter that class will be offered., F
+R39,1,1,0,0,1,0,0,0,0,0,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+
+% 3,40, For each class within a sequence for a cohort  Program Administrators and Nursing Staff Members shall be able to specify which quarter that class will be offered., F
+R40,1,1,0,0,1,0,0,0,0,0,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+
+% 3,41, Program Administrators and Nursing Staff Members shall be able to add new classes to a sequence of classes, F
+R41,1,1,1,0,1,1,0,1,1,0,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+
+% 3,42, Program Administrators and Nursing Staff Members shall be able to add clinical classes or sections to a sequence of classes, F
+R42,1,1,1,0,1,1,0,1,1,0,1,1,1,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0
+
+% 3,43, Program Administrators and Nursing Staff Members shall be able to add a new cohort to the system  identified by start month and year., F
+R43,1,1,0,0,1,0,0,1,1,0,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+
+% 3,44, Program Administrators and Nursing Staff Members shall be able to add new classes for the nursing department into the system., F
+R44,1,1,1,0,1,1,0,0,1,0,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+
+% 3,45, A class shall be either a non-clinical class or a clinical class., F
+R45,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0
+
+% 3,46, A non-clinical class shall specify the course name  lecture room requirements  and instructor needs., F
+R46,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+
+% 3,47, A clinical class shall specify the course name  lecture room requirements  clinical site needs  lecture instructor needs  and clinical lab instructor needs., F
+R47,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0
+
+% 3,48, Program Administrators/Nursing Staff Members shall be able to create a new Program of Study., F
+R48,1,1,0,0,1,0,0,0,1,0,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+
+% 3,49, A Program of Study shall consist of a program name and listing of required classes (both clinical and non-clinical) that must be completed., F
+R49,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0
+
+% 3, 50, Program Administrators and Nursing Staff Members shall have the ability to specify which classes are required for a Program of Study, F
+R50,1,1,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+
+% 3,51, The system shall be able to display a report of needed classes for a given quarter for all cohorts of all programs for Program Administrators/Nursing Staff Membersí planning purposes., F
+R51,1,1,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+
+% 3,52, The report of needed classes shall include (but not be limited to) classes to be offered  number of sections needed  number of labs needed  and room types needed., F
+R52,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+
+% 3,53, Classes for a given cohort shall not conflict with regards to the time and day that they are offered., F
+R53,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+
+%3,54, Program Administrators and Nursing Staff Members shall be able to add a new clinical site into the system., F
+R54,1,1,1,0,1,1,0,0,0,0,1,1,1,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0
+
+% 3,55, Clinical site information shall include (but not be limited to) the name of the site  contact person  and contact information., F
+R55,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0
+
+% 3, 56, Program Administrators and Nursing Staff Members shall be able to add a new clinical lab section for an existing clinical class into the System., F
+R56,1,1,1,0,1,1,0,0,1,0,1,1,1,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0
+
+% 3, 57, A clinical lab section shall include the clinical site name  the class  instructor  day and time of the lab., F
+R57,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0
+
+% 3,58, Program Administrators and Nursing Staff Members shall be able to add a student who has registered for a clinical class to a clinical lab section for that class., F
+R58,1,1,0,0,1,0,0,0,1,0,1,1,1,0,0,0,0,0,0,0,0,0,0,1,0,1,1,0,0,0,0,0,0
+
+% 3, 59, The system shall allow a Program Administrator or Nursing staff member to remove a student from a clinical lab section.,F 
+R59,1,1,0,0,1,0,0,0,1,0,1,1,1,0,0,0,0,0,0,0,0,0,0,1,0,1,1,0,0,0,0,0,0
+
+% 3,60, The system shall allow a Program Administrator/Nursing Staff Member to move a student from one clinical lab section to another clinical lab section corresponding to the same clinical class., F
+R60,1,1,0,0,1,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1,1,0,0,0,0,0,0
+
+% 3,61, Program Administrators/Nursing Staff Members shall be able to cancel a clinical lab section only if there are no students registered for that clinical lab section., F
+R61,1,1,0,0,1,1,0,0,1,0,1,1,1,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0
+
+% 3,62, A Program Administrator/Nursing Staff Member shall be able to add a new nursing student to the system., F
+R62,1,1,0,0,1,0,0,0,0,0,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0
+
+% 3,63, A staff member shall have the ability to manage the progress of a part time student  which includes modifying their sequence of classes and timeline of classes., F
+R63,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0
+
+% 3,64, The system shall be able to display a printable summary for individual cohorts  which will include the students enlisted  the Program of study  sequence of classes  cohort progress through the program  and timeline of completion., F
+R64,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0
+
+% 3,65, The system shall be able to display a printable summary for individual clinical sites  which will include information on labs being held at that site for the given quarter (Clinical site  general information on labs held at that location  dates and times of all labs held there)., F
+R65,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0
+
+% 3,66, The system shall be able to display a printable summary for individual clinical labs  which will include (but not be limited to) class name  class number  lab section  listing of students enrolled  instructor  day(s)  time  and location., F
+R66,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1,1,0,0,0,0,0,0
+
+% 3,67, The system shall be able to display a printable summary for individual nursing students  which will include (but not be limited to) student name  student ID  admission date  classes  credits  GPA  and the cohort that the student is enrolled in., F
+R67,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0
+
+% 3,68, The system shall be able to display a printable summary of the system log., F
+R68,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+
+% 3,69, The system shall contain contact information (e-mail and phone number) for all people relevant to the system  including (but not limited to) staff members  students  lecture instructors  clinical lab instructors  and clinical site administrators., F
+R69,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,0,0,0,0,0,0
+
+% 3,70, The system will use the stored e-mail addresses as a primary means of communicating information to affected parties., F
+R70,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+
+% 3,71, The system will notify affected parties for routine communication purposes  including but not limited to informing students of upcoming offered classes (timeline) and what their schedule will be/shall be., F
+R71,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+
+% 3,72, The system will notify affected parties when changes occur affecting clinicals  including but not limited to clinical section capacity changes  and clinical section cancellations., F
+R72,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+
+% 3,73, The system will notify affected parties when changes occur affecting classes  including but not limited to class cancellations  class section detail changes  and changes to class offerings for a given quarter., F
+R73,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+
+% 3,74, The system will notify affected parties when changes occur affecting cohorts  including but not limited to changes to the sequence for a cohortís program of study and changes to a given weekís schedule (lab cancelled this week due to instructor illness)., F
+R74,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+
+% 3,75, The system will notify affected parties when changes occur affecting specific students  including but not limited to changing a studentís status from full time to part time and moving a student to a different clinical section., F
+R75,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+
+% 3,76, Program Administrators/Nursing Staff Members shall have the ability to modify information relating to cohorts  including cohort identifier  program of study  preferred sequence of classes and quarters that a cohort will be taking specific classes., F
+R76,1,1,0,0,1,0,1,1,1,0,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+
+% 3,77, Program Administrators/Nursing Staff Members shall have the ability to modify information relating to a Program of Study within the Nursing Department  including the Program of study name  and required classes for that Program of Study., F
+R77,1,1,0,0,1,0,0,0,1,0,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+
+% 3,78, Program Administrators/Nursing Staff Members shall have the ability to modify information relating to a Clinical Site  including the clinical site name  site contact person  contact information  and address., F
+R78,1,1,0,0,0,0,0,1,1,0,1,1,1,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0
+
+% 3,79, Program Administrators/Nursing Staff Members shall have the ability to modify information relating to a Clinical Lab Section  including the clinical site name  the department/section for the lab  the class  instructor  day and time of lab  and contact information., F
+R79,1,1,0,0,0,0,0,0,1,0,1,1,1,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0
+
+% 3,80, Program Administrators/Nursing Staff Members shall have the ability to modify information relating to a Nursing Student  including student ID  student name  phone number  e-mail  status (full time or part time)  and program of study., F
+R80,1,1,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0
+

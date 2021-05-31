@@ -1,0 +1,9 @@
+numpy 1.19.3
+pandas 1.1.5
+matplotlib 3.3.3
+nltk 3.5 (models: punkt, wordnet, stopwords, averaged_perceptron_tagger)
+sklearn 0.24.0
+tensorflow 2.4.0
+gensim 3.8.3
+
+For tensorflow GPU optimization: CUDA v11.1.1 (copy 'cusolver64_11.dll' and rename to 'cusolver64_10.dll'), cuDNN 8.0.4 for CUDA v11.1.
